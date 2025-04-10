@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>레이아웃 - 기본세로유형</title>
+    <title>레이아웃 - 응용1</title>
 
 
     <style>
@@ -21,17 +21,22 @@
             2. 클래스 선택자( . )
             
         */
-        div {
+
+        .wrap {
+            /* 자식 요소 가로 배치하기 위해서 */
+            display: flex;
+        }
+
+        .header {
+            width: 100px;
             background: #ccc;
-            width: 600px;   /* w600 */
         }
 
-        .header{
-            height: 50px;
+        .right_contents {
+            width: 500px;
         }
-
         .slide{
-            height: 150px;
+            height: 200px;
             background: #89fc89;
         }
 
@@ -42,19 +47,8 @@
 
         .footer{
             height: 50px;
+            background: rgb(255, 199, 116);
         }
-
-
-
-
-
-
-
-
-
-
-
-
 
     </style>
 
@@ -64,10 +58,16 @@
 </head>
 
 <body>
-    <div class="header">헤더</div>
-    <div class="slide">슬라이드</div>
-    <div class="contents">콘텐츠</div>
-    <div class="footer"> 푸터 </div>
+
+    <div class="wrap">
+        <div class="header">헤더</div>
+        <div class="right_contents">
+            <div class="slide">슬라이드</div>
+            <div class="contents">콘텐츠</div>
+            <div class="footer"> 푸터 </div>
+        </div>
+    </div>
+
 </body>
 
 </html>
