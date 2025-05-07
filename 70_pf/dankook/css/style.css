@@ -1,10 +1,15 @@
 @charset "utf-8";
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css);
+
+/* padding 과 border크기의 박스를 안쪽으로 지정한다 */
+* {
+    box-sizing: border-box;
+}
 
 body {
     font: 16px/1.6 "굴림", sans-serif;
     background: #fff;
     color : #333;
-    margin: 0;
     /* color : #1b3b86; */
 
 }
@@ -12,14 +17,13 @@ a {
     color : #333;
     text-decoration: none;
 }
-h1 {
+body, h1, h2, p, ul {
     margin: 0;
 }
 li {
     padding: 0;
 }
 ul {
-    margin: 0;
     padding: 0;
     list-style: none;
 }
@@ -68,13 +72,111 @@ nav a {
 /* 콘텐츠 */
 
 .contents {
-    height: 720px;
+    height: 600px;
+}
+
+.contents a {
+    color:#fff;
+}
+
+.link {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 120px;
     background: #1b3b86;
+}
+
+
+.banner {
+    display: flex;
+    height: 150px;
+    background: rgb(150, 191, 243);
+    justify-content:space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+.banner .cont {
+    display: flex;
+}
+.banner .cont img {
+    margin-right: 16px;
+}
+
+
+
+.noge {
+    display: flex;
+    width: 1340px;
+    height: 330px;
+    background: #1b3b86;
+    padding: 30px;
+    color: #fff;
+}
+.noge h2 {
+    margin-bottom: 16px;
+}
+
+.notice {
+    width: 670px;
+}
+
+
+.notice tr td:nth-child(2){
+    padding-left: 80px;
+}
+
+.gallery {
+    width: 670px;
+}
+
+.inner {
+    display: flex;
+}
+
+.gallery a {
+    margin-right: 15px;
 }
 /* 푸터 */
 
 footer {
+    display: flex;
+    /* align-items와 align-content를 함께 사용하면 align-items가 적용된다. */
+    align-items: center;
     height: 120px;
     background: #333;
+    color:#777;
+    padding: 0 30px;
+}
+footer a {
+    color:#777;
 }
 
+.left {
+    width: 1000px;
+    padding-top: 35px;
+}
+
+.right {
+    width: 340px;
+}
+.sns {
+    padding-top: 16px;
+    height: 60px;
+    font-size: 24px;
+}
+
+.sns li{
+    display: inline;
+    margin-right: 16px;
+}
+
+.sns li:nth-of-type(1) a:hover {
+    color: #1a5bad;
+}
+.sns li:nth-of-type(2) a:hover {
+    color: red;
+}
+.sns li:nth-of-type(3) a:hover {
+    color: rgb(9, 168, 241);
+}
