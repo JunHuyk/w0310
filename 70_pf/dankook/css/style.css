@@ -1,0 +1,80 @@
+@charset "utf-8";
+
+body {
+    font: 16px/1.6 "굴림", sans-serif;
+    background: #fff;
+    color : #333;
+    margin: 0;
+    /* color : #1b3b86; */
+
+}
+a {
+    color : #333;
+    text-decoration: none;
+}
+h1 {
+    margin: 0;
+}
+li {
+    padding: 0;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+header, .contents, footer{
+    width: 1340px;
+    margin: 0 auto;
+}
+
+/* 헤더 */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    /* background: #1b3b86; */
+    align-items: center;
+}
+
+nav {
+    width: 600px;
+    height: 60px;
+
+}
+
+nav li {
+   display: inline-block;
+   width: 120px;
+   line-height: 60px;
+}
+
+nav a {
+    font-size: 18px;
+}
+
+/* 슬라이드 */
+
+.slide {
+    overflow : hidden;
+    height: 350px;
+}
+.slide li+li {
+    display: none;
+}
+
+/* 콘텐츠 */
+
+.contents {
+    height: 720px;
+    background: #1b3b86;
+}
+/* 푸터 */
+
+footer {
+    height: 120px;
+    background: #333;
+}
+
