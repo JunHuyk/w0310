@@ -122,8 +122,9 @@ nav a {
 }
 
 
-.notice tr td:nth-child(2){
-    padding-left: 80px;
+.notice a {
+    display: inline-block;
+    width: 500px;
 }
 
 .gallery {
