@@ -84,6 +84,7 @@ nav a{
 
 /* 푸터 */
 footer {
+    display: flex;
     height: 120px;
     background: yellow;
 }
