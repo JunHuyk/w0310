@@ -87,3 +87,15 @@ footer {
     height: 120px;
     background: yellow;
 }
+.blogo {
+    width: 200px;
+}
+
+.center_content{
+    width: calc(100% - 500px);
+    background: darkcyan;
+}
+.fs {
+    width: 300px;
+    background: darkgreen;
+}
