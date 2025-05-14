@@ -73,8 +73,28 @@ nav a{
 /* 콘텐츠 */
 .contents {
     width: 400px;
-    background: green;
 }
+
+/* 배너 */
+.banner {
+    height: 120px;
+    background: lightblue;
+}
+/* 공지사항 */
+.notice {
+    height: calc(100% - 600px);
+}
+/* 갤러리 */
+.gallery {
+    height: 360px;
+    background: rgb(15, 255, 195);
+}
+/* 바로가기 링크 */
+.link {
+    height: 120px;
+    background: lightsalmon;
+}
+
 /* 슬라이드 */
 .slide {
     width: calc(100% - 600px);
@@ -84,6 +104,37 @@ nav a{
 
 /* 푸터 */
 footer {
+    display: flex;
+    align-items: center;
     height: 120px;
-    background: yellow;
+    background: #333;
+}
+/* 하단 로고 */
+.blogo {
+    width: 200px;
+}
+/* 하단 메뉴, 주소 및 저작권*/
+.center_content{
+    width: calc(100% - 500px);
+    padding-left: 30px;
+    color:#666;
+}
+.bmenu {
+    display:flex;
+    /* justify-content: center; */
+    height: 50px;
+}
+.bmenu a {
+    color:#999;
+}
+.bmenu li {
+    margin-right: 16px;
+}
+.bmenu li:not(:last-child):after {
+    content:'|';
+    margin-left: 16px;
+}
+/* 패밀리사이트 */
+.fs {
+    width: 300px;
 }

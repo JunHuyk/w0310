@@ -1,36 +1,52 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>무산은성관광</title>
 </head>
+
 <body>
     <div class="wrap">
         <!-- 헤더 -->
-         <header>
+        <header>
             <!-- 로고 -->
-             <h1 class="logo">
+            <h1 class="logo">
                 <a href="#">
                     <img src="images/logo.png" alt="로고">
                 </a>
             </h1>
             <!-- 내비게이션 -->
-             <nav>
+            <nav>
                 <ul>
                     <li><a href="#">국내당일여행</a></li>
                     <li><a href="#">국내숙박여행</a></li>
                     <li><a href="#">섬여행</a></li>
                     <li><a href="#">제주도</a></li>
-                    <li><a href="#">전세버스</a></li>
                 </ul>
-             </nav>
-         </header>
+            </nav>
+        </header>
         <!-- 콘텐츠 -->
-        <div class="contents">d</div>
+        <div class="contents">
+            <!-- 배너 -->
+            <div class="banner">
+                <img src="./images/banner.jpg" alt="배너이미지">
+            </div>   
+
+            <!-- 공지사항 -->
+            <div class="notice"></div>
+
+            <!-- 갤러리 -->
+            <div class="gallery"></div>
+
+            <!-- 바로가기 링크 -->
+            <div class="link"></div>
+        </div>  <!-- .contents end -->
+
         <!-- 슬라이드 -->
-         <div class="slide">
+        <div class="slide">
             <ul>
                 <li>
                     <a href="#"><img src="images/slide1.jpg" alt="슬라이드1"></a>
@@ -44,9 +60,41 @@
                 </li> 
                 -->
             </ul>
-         </div>
-    </div>
+        </div>
+    </div>  <!-- .wrap end -->
     <!-- 푸터 -->
-    <footer></footer>
+    <footer>
+        <!-- 하단로고 -->
+        <div class="blogo">
+            <img src="./images/blogo.png" alt="하단로고">
+        </div>
+        <!-- 하단 메뉴 , 주소 및 저작권 -->
+        <div class="center_content">
+            <ul class="bmenu">
+                <li><a href="#">회사소개</a></li>
+                <li><a href="#">찾아오시는 길</a></li>
+                <li><a href="#">개인정보 취급방침</a></li>
+                <li><a href="#">이용약관</a></li>
+                <li><a href="#">해외여행약관</a></li>
+                <li><a href="#">마케팅제휴</a></li>
+            </ul>
+            <p>상호 : (주)부산은성관광 / 대표 : 장영둘 / 주소 : 부산광역시 부산진구 범일로 190 (범천동 849-1)</p>
+            <p>사업자등록번호 : 621-81-53550 / 관광사업등록증 : 국내외여행업</p>
+        </div>
+        <!-- 패밀리 사이트 -->
+        <div class="fs">
+                <form action="#">
+                    <select name="fs" id="fs">
+                        <option selected>Family Site</option>
+                        <option disabled>========</option>
+                        <option value="fs1">Cruise</option>
+                        <option value="fs2">BizMODE</option>
+                        <option value="fs3">다낭 스테이호텔</option>
+                        <option value="fs4">여기어때</option>
+                    </select>
+                </form>
+        </div>
+    </footer>
 </body>
+
 </html>
