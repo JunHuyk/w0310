@@ -78,7 +78,8 @@ nav a{
 /* 배너 */
 .banner {
     display: flex;
-    height: 150px;
+    /* height: 150px; */
+    height: 15%;
     background: rgb(150, 191, 243);
     justify-content:space-between;
     align-items: center;
@@ -93,12 +94,20 @@ nav a{
 }
 /* 공지사항 */
 .notice {
-    height: calc(100% - 630px);
+    /* height: calc(100% - 630px); */
+    height: 30%;
 }
 
 .notice li {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid black ;
     padding: 15px 10px;
+    height: 56px;
+}
+.notice span:hover {
+    border-bottom: 1px solid #28A7E1 ;
+}
+.notice a:hover {   
+    color:#28A7E1 ;
 }
 .notice h2{
     border-bottom: 1px solid #000;
@@ -106,12 +115,13 @@ nav a{
 }
 .notice span{
     display: inline-block;
-    width: 300px;
+    width: 280px;
 }
 /* 갤러리 */
 .gallery {
-    height: 360px;
-    background: rgb(15, 255, 195);
+    height: 30%;
+    /* height: 360px; */
+    background: #c0fcfc;
 }
 .gallery h2 {
     padding: 15px 0 15px 12px;
@@ -124,13 +134,14 @@ nav a{
 
 /* 바로가기 링크 */
 .link {
+    height: 25%;
     display: flex;
     justify-content: space-evenly;
     font-size: 14px;
-    height: 120px;
+    /* height: 120px; */
     text-align: center;
     align-items: center;
-    background: lightsalmon;
+    background: #d3ffff;
 }
 
 
