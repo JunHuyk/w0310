@@ -1,0 +1,91 @@
+@charset "UTF-8";
+
+/* 초기화 */
+
+body {
+  background: #fff;
+  color: #333;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+h1,h2,p {
+    margin: 0;
+}
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+.wrap {
+  display: flex;
+  width: 100%;
+}
+
+/* 헤더 */
+.header {
+  width: 200px;
+}
+.header h1 {
+    margin-top: 20px;
+}
+nav {
+    margin-top: 50px;
+}
+/* 글로벌 내비게이션 */
+.gnb li {
+  padding: 15px;
+  border: 1px solid black;
+  margin: 0 10px;
+}
+/* 서브메뉴 */
+.sub_menu {
+  font-size: 14px;
+  padding: 10px;
+}
+.sub_menu li {
+  display: inline-block;
+}
+.sub_menu li:first-child::after {
+  content: "|";
+  margin-left: 8px;
+}
+.sub_menu a {
+  color: blue;
+}
+
+/* 컨텐츠 */
+.slide {
+  position: relative;
+  width: 1720px;
+  height: 400px;
+}
+.slide_link {
+    background: #fff;
+    position: absolute;
+    top: 20px; 
+    right: 60px; 
+    display: flex;
+    flex-direction: column;
+}
+.slide_link div {
+    margin-top: 10px;
+    padding: 0 10px 10px 10px;
+    
+}
+.slide_link div:not(:last-of-type) {
+    border-bottom:1px dotted black;
+}
+
+/* 배너 */
+.banner {
+    display: inline-block;
+    margin-top: 20px;
+}
+.banner h2 {
+    margin-left: 30px;
+}
