@@ -3,32 +3,35 @@
 /* 초기화 */
 
 body {
-  background: #fff;
-  color: #333;
-  margin: 0;
+    background: #fff;
+    color: #333;
+    margin: 0;
+    width: 100%;
 }
 
 ul {
-  list-style: none;
-  padding: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 h1,h2,p {
     margin: 0;
 }
 a {
-  color: #333;
-  text-decoration: none;
+    color: #333;
+    text-decoration: none;
 }
 
 .wrap {
-  display: flex;
-  width: 100%;
+    display: flex;
+    width: 100%;
 }
 
 /* 헤더 */
 .header {
-  width: 200px;
+    width: 200px;
+    background: #ccc;
 }
 .header h1 {
     margin-top: 20px;
@@ -38,9 +41,22 @@ nav {
 }
 /* 글로벌 내비게이션 */
 .gnb li {
-  padding: 15px;
-  border: 1px solid black;
-  margin: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    border: 1px solid black;
+    margin: 0 10px;
+}
+.gnb li a:hover {
+      transition:.3s;
+      background-color: #000;
+      color:#fff
+}
+.gnb a {
+    display: block;
+    padding-left: 10px;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
 }
 /* 서브메뉴 */
 .sub_menu {
@@ -67,25 +83,103 @@ nav {
 .slide_link {
     background: #fff;
     position: absolute;
-    top: 20px; 
+    top:0; 
     right: 60px; 
     display: flex;
     flex-direction: column;
+    text-align: center;
 }
 .slide_link div {
     margin-top: 10px;
     padding: 0 10px 10px 10px;
-    
+
 }
+
 .slide_link div:not(:last-of-type) {
     border-bottom:1px dotted black;
 }
 
+
+
 /* 배너 */
 .banner {
-    display: inline-block;
-    margin-top: 20px;
+    display:flex;
+    height: 200px;
+    border: 1px solid #333;
+    align-items: center;
 }
-.banner h2 {
+.banner h2,
+.banner p {
     margin-left: 30px;
+}
+.banner img {
+    margin-left: 40px;
+    height: 60px;
+}
+
+.banner_txt h2{
+    margin-bottom:20px;
+}
+/* 공지사항/갤러리 */
+.noge {
+    width: 1720px;
+    height: 250px;
+    border: 1px solid #333;
+    font-size: 18px;
+}
+.noge h3 {
+    margin-left: 40px;
+}
+.noge li {
+    margin:10px 0 10px 40px;
+}
+.noge a {
+    display: inline-block;
+    width: 700px;
+}
+.noge a:hover {
+    color: blue;
+    text-decoration:underline;
+}
+/* 푸터 */
+
+.footer {
+    display: flex;
+    width: 1920px;
+    height: 120px;
+    align-items: center;
+    background: #333;
+    font-size: 12px;
+}
+.blogo {
+    width: 200px;
+}
+
+.ft_contents {
+    flex:1;
+    height: 100%;
+}
+.ft_menu {
+    height: 60px;
+    line-height: 60px;
+    margin-left: 30px;
+}
+.ft_menu ul{
+    display: flex;
+}
+
+.ft_menu li:not(:last-child)::after {
+    color:#fff;
+    content: "|";
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.ft_menu a {
+    color:#fff;
+}
+.copy {
+    height: 60px;
+    line-height: 30px;
+    margin-left: 30px;
+    color: #fff;
 }
