@@ -31,7 +31,7 @@ a {
 /* 헤더 */
 .header {
     width: 200px;
-    background: #ccc;
+    background: #b0def8;
 }
 .header h1 {
     margin-top: 20px;
@@ -58,10 +58,12 @@ nav {
     height: 100%;
     box-sizing: border-box;
 }
+
 /* 서브메뉴 */
 .sub_menu {
   font-size: 14px;
-  padding: 10px;
+  text-align: center;
+  padding-top: 20px;
 }
 .sub_menu li {
   display: inline-block;
@@ -71,73 +73,67 @@ nav {
   margin-left: 8px;
 }
 .sub_menu a {
-  color: blue;
+  color: #333;
 }
 
 /* 컨텐츠 */
+.contents {
+    width: calc(100% - 200px);
+}
 .slide {
   position: relative;
-  width: 1720px;
+  width: calc(100% - 200px);
   height: 400px;
 }
 .slide_link {
-    background: #fff;
     position: absolute;
     top:0; 
-    right: 60px; 
+    right: 0; 
     display: flex;
     flex-direction: column;
     text-align: center;
 }
 .slide_link div {
-    margin-top: 10px;
     padding: 0 10px 10px 10px;
-
-}
-
-.slide_link div:not(:last-of-type) {
-    border-bottom:1px dotted black;
+    background: #b0def8;
 }
 
 
 
 /* 배너 */
 .banner {
+    width: 100%;
     display:flex;
     height: 200px;
-    border: 1px solid #333;
     align-items: center;
+    border-bottom: 1px solid gray;
+    justify-content: space-evenly;
 }
-.banner h2,
-.banner p {
-    margin-left: 30px;
-}
+
 .banner img {
     margin-left: 40px;
-    height: 60px;
 }
 
 .banner_txt h2{
     margin-bottom:20px;
 }
 /* 공지사항/갤러리 */
-.noge {
+.tab {
     width: 1720px;
     height: 250px;
-    border: 1px solid #333;
     font-size: 18px;
 }
-.noge h3 {
-    margin-left: 40px;
+.tab h2 {
+    margin: 20px 0 20px 40px;
 }
-.noge li {
+.tab li {
     margin:10px 0 10px 40px;
 }
-.noge a {
+.tab a {
     display: inline-block;
     width: 700px;
 }
-.noge a:hover {
+.tab a:hover {
     color: blue;
     text-decoration:underline;
 }
