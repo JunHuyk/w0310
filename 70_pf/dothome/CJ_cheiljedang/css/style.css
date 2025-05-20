@@ -134,17 +134,11 @@ nav {
     display: inline-block;
     width: 700px;
 }
-<<<<<<< HEAD
 .tab a:hover {
     color: #333;
     text-decoration:underline;
-=======
-.tab a:hover {
-    /* color: blue; */
-    /* text-decoration:underline; */
     background: white;
-    transition: .4s;
->>>>>>> 84ff8941dacedbc4b0c668959edc2b462b53061d
+    transition: .3s;
 }
 /* 푸터 */
 
