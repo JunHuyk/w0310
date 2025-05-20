@@ -3,6 +3,7 @@
 
 /* 초기화 */
 * {
+    padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
@@ -14,6 +15,7 @@ body {
     background: #fff;
     color:#333;
     font: 15px/1.6 '굴림돋움', sans-serif;
+    width: 100%;
 }
 a {
     color:#333;
@@ -30,7 +32,7 @@ html, body {
         calc(피연산자 연산자 피연산자); 
         연산자: +, -, *, /
     */
-
+    
     height: calc(100% - 120px);
 }
 
@@ -70,6 +72,8 @@ nav a{
     height: 100%;
     transition: .3s;
 }
+
+
 /* 콘텐츠 */
 .contents {
     width: 400px;
@@ -147,9 +151,33 @@ nav a{
 
 /* 슬라이드 */
 .slide {
-    width: calc(100% - 600px);
-    /* overflow: hidden;은 콘텐츠가 영역을 벗어나면 숨긴다. */
     overflow: hidden;
+    width: calc(100% - 600px);
+    height: 100%;
+}
+.slide ul {
+    position: relative;
+    display: flex;
+    width: 400%;
+    height: calc(100% - 120px);
+    animation: slide 8s infinite;
+}
+.slide li {
+    width: 25%;
+    font-size: 100px;
+}
+@keyframes slide {
+    0% {left:0%;}
+    10% {left:-100%;}
+    33% {left:-100%;}
+    43% {left:-200%;}
+    66% {left:-200%;}
+    76% {left:-300%;}
+    99.99% {left:-300%;}
+    100% {left:0%;}
+}
+.slide img {
+    width: 100%;
 }
 
 /* 푸터 */
