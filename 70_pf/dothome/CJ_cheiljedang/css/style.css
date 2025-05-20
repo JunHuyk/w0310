@@ -138,7 +138,7 @@ nav {
     width: 700px;
 }
 .noge a:hover {
-    color: blue;
+    color: #333;
     text-decoration:underline;
 }
 /* 푸터 */
