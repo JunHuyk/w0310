@@ -33,6 +33,7 @@ header {
 
 .logo {
     width: 200px;
+    padding-left: 40px;
 }
 .logo img {
     display: block;
@@ -50,7 +51,7 @@ nav a:hover {
     color : #888;
     transition: .3s;
 }
-nav ul {
+nav>ul {
     display: flex;
 }
 nav ul li {
@@ -59,10 +60,30 @@ nav ul li {
     text-align: center;
     line-height: 36px;
 }
-nav ul li:not(:first-child) {
+.gnb li:not(:first-child) {
     margin-left: 70px;
 }
+.sub_menu {
+    width: 640px;
+    height: 200px;
+    display: none;
+    position: absolute;
+    top:100%;
+    left: 0%;
+    background: #000;
+    z-index:9999;
+    font-size: 14px;
+}
+.sub_menu ul li a {
+    display: block;
+    padding: 20px 0;
+}
 
+nav:hover .sub_menu{
+    display: flex;
+    justify-content: space-between;
+    width:100%;
+}
 
 /* 콘텐츠 */
 .wrap {
@@ -99,6 +120,7 @@ img {
     99.99%{top: -300%;}
     1000%{top: 0%;}
 }
+/* 콘텐츠 */
 .contents {
     height: 200px;
     display: flex;
@@ -109,7 +131,7 @@ img {
     border-right:1px solid #DDD;
 }
 .notice h2 {
-    padding: 15px 10px;
+    padding: 15px 0px 5px 10px;
 }
 .notice a {
     display: inline-block;

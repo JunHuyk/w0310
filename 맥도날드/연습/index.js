@@ -20,10 +20,6 @@ const slideMove = (()=>{
     }
 });
 
-setInterval(()=>{
-    idx++;
-    slideMove();
-},3000)
 
 after.addEventListener("click",()=>{
     idx++;
@@ -40,10 +36,10 @@ after.addEventListener("click",()=>{
             slide.style.transition = "transform 0.5s ease";
             slide.style.transform = `translateX(-${idx*100}vw)`;
         }, 50);
-    
+        
     }
 });
-    
+
 before.addEventListener("click",()=>{
     idx--;
     slide.style.transition = "transform 0.5s ease";
@@ -62,6 +58,7 @@ before.addEventListener("click",()=>{
     }
 });
 
-// idx = 4;
-// slide.style.transition = "none";
-// slide.style.transform = `translateX(-${idx*100}vw)`;
+setInterval(()=>{
+    idx++;
+    slideMove();
+},3000)
