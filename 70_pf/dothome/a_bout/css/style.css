@@ -51,7 +51,7 @@ nav a:hover {
     color : #888;
     transition: .3s;
 }
-nav>ul {
+nav > ul {
     display: flex;
 }
 nav ul li {
