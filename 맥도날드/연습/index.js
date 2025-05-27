@@ -42,10 +42,10 @@ after.addEventListener("click",()=>{
 
 before.addEventListener("click",()=>{
     idx--;
-    slide.style.transition = "transform 0.5s ease";
     slide.style.transform = `translateX(-${idx*100}vw)`;
     if( idx === 0 ) {
         setTimeout(() => {
+            slide.style.transform= `trnaslateX(-${idx*100}vw)`;
             slide.style.transition ='none';
             idx = 5;
             slide.style.transform = `translateX(-${idx*100}vw)`;
