@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .flex_box {
+            display: flex;
+            height: 200px;
+            background: teal;
+            flex-direction: row;
+            /* flex 아이템의 높이가 부모크기만큼 늘어난다 */
+            align-items: stretch;   
+        }
+        .flex_box div {
+            width: 50px;
+            background: red;
+            margin: 20px;
+        }
+        /* 
+
+            flex-direction : row > 주 축 가로 (기본값)
+                justify-content > 주축 정렬 (가로)
+                align-items > 교차축 정렬 (세로) 
+
+            flex-direction : column > 주 축 세로
+                justify-content > 주축 정렬(세로)
+                align-items > 교차축 정렬 (가로)
+
+            주축/교차축 정렬
+
+                justify-content
+                    값 : flex-start,flex-end, center
+                         space-between
+                         space-around
+                         space-evenly
+                align-content
+                    값 : flex-start,flex-end, center
+                         space-between, space-around, space-evenly
+                         stretch
+
+                align-items
+                    값 : flex-start,flex-end, center
+                         space-between, space-around, space-evenly
+                         stretch, baseline
+
+
+                align-self
+                    값 : flex-start,flex-end, center
+                         space-between, space-around, space-evenly
+                         stretch, baseline
+
+        
+        */
+    </style>
+</head>
+<body>
+    <div class="flex_box">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+</body>
+</html>

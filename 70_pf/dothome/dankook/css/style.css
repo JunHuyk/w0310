@@ -62,11 +62,22 @@ nav a {
 /* 슬라이드 */
 
 .slide {
-    overflow : hidden;
-    height: 350px;
+  overflow: hidden;
+  width: 100vw;
+  height: 350px;
 }
-.slide li+li {
-    display: none;
+.gnb {
+  display: flex;
+  width: 400vw;
+  transition: transform 0.3s ease;
+}
+.navinner {
+  width: 100vw;
+  flex-shrink: 0;
+}
+.navinner img {
+  width: 100%;
+  display: block;
 }
 
 /* 콘텐츠 */

@@ -6,6 +6,7 @@
     <title>데이터 타입</title>
 </head>
 <body>
+    <div id="gnb">내가 gnb야</div>
     <script>
         /* 
             데이터 타입
@@ -76,22 +77,36 @@
         // 객체, 클래스, 생성자, 함수, 메서드
         // Boolean(데이터) -> 데이터를 불 값으로 생성한다
         // 0만 flase , 0 이외의 숫자는 true
+        // undefined와 null은 false
         document.write(Boolean(boo3)); // false
         document.write('<br>');
         document.write(Boolean(boo4)); // true
         
+
         //undefined
         var temp 
         document.write('<br>');
         document.write(temp);
         
-        // 객체 데이터는 {}로 표기한다.
-        var obj = {};
-        obj.name = "홍길동";
-        obj.age
+        //null - 빈(empty) 상태(초기화), 데이터를 할당하였으나 값이 존재하지 않을 때
+        var temp2 = 10;
+        temp2 = null;
         document.write('<br>');
-        document.write (obj.age);
+        document.write(temp2);
 
+        //document는 문서객체
+        // .getElementById()는 객체의 메서드(method,동작, 방법)
+        // get 얻다, 가져오다
+        // Element 요소
+        // by ~에 의해
+        // id -> html의 id속성
+        // .메서드 (파라미터, 매개변수)
+
+        var gnb = document.getElementById('gnb');
+        document.write('<br>');
+        document.write(gnb);
+        
+        
     </script>
 </body>
 </html>
