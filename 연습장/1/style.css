@@ -28,13 +28,14 @@ ul {
     list-style: none;
 }
 
-.contents, footer{
+header, .contents, footer{
     width: 1340px;
     margin: 0 auto;
 }
 
 /* 헤더 */
 
+ 
 header {
     width: 1320px;
     height: 100px;
@@ -43,13 +44,9 @@ header {
     align-items: center;
     margin: 0 auto;
 }
-nav {
-    width: 600px;
-}
 /* GNB */
 /* 폰트 위계 */
 /* 1depth */
-
 .main { 
     display: flex;
 }
@@ -79,7 +76,6 @@ nav {
     transition: .3s;
     background: rgba(0,0,0,0.5);
     padding: 10px 0 20px;
-    z-index: 4;
 }
 .main>li:hover .sub{
     height: 200px;
@@ -91,6 +87,8 @@ nav {
     font-size: 14px;
 }
 
+
+
 /* 슬라이드 */
 
 .slide {
@@ -98,7 +96,7 @@ nav {
   width: 100vw;
   height: 350px;
 }
-.slidegnb {
+.gnb {
   display: flex;
   width: 400vw;
   transition: transform 0.3s ease;
@@ -224,3 +222,7 @@ footer a {
 .sns li:nth-of-type(3) a:hover {
     color: rgb(9, 168, 241);
 }
+ 
+ 
+ 
+ 
