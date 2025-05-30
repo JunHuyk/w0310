@@ -13,5 +13,8 @@ line-height : 2; < 안주면 서브메뉴 잘림
 transition : .5s;
 
 이후 모든 서브메뉴가 한번에 내려오는거면 .main : hover
- 개별 메뉴의 서브메뉴 하나씩 내려오는거면 .main>li : hover
+개별 메뉴의 서브메뉴 하나씩 내려오는거면 .main>li : hover
+
+header에 position:relative;
+내비게이션 ul 에 position:absolute;
 

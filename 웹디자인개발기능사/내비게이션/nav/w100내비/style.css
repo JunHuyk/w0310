@@ -1,45 +1,123 @@
 /* 초기화 */
-body {
+/* 기본 설정 */
+* {
     box-sizing: border-box;
+}
+body, ul {
+    margin: 0;
+    padding: 0;
 }
 ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
-}
-body {
-    margin: 0;
 }
 a {
-    color:black;
     text-decoration: none;
 }
-/* 헤더 w100% relative */
+
+/* 폰트 및 전체 크기 */
+html {
+    font-size: 10px;
+}
+body {
+    font: 400 1.5rem/1.5 "Noto Sans KR", sans-serif;
+}
+
+/* 기본 리셋 */
+body, ul {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+/* 전체 폰트 설정 */
+html {
+    font-size: 10px;
+}
+body {
+    font: 400 1.5rem/1.5 "Noto Sans KR", sans-serif;
+}
+
+/* 헤더 */
 header {
-    height: 100px;
-    display: flex;
-    background: #eee;
     position: relative;
+    width: 1200px;
+    height: 100px;
+    margin: auto;
+    border: 1px solid;
 }
+
+/* GNB 영역 */
 .gnb {
-    position: absolute;
+    position: relative;
     top: 30px;
-    right: 0;
-    z-index: 2;
+    background: #111;
 }
+
+/* 메인 메뉴 */
 .main {
     display: flex;
 }
-.main>li {
-    width: 200px;
-    height: 50px;
-    line-height: 50px;
+
+.main > li {
+    width: 160px;
     text-align: center;
+    line-height: 30px;
 }
 
+.main > li > a {
+    color: #999;
+    font-size: 1.6rem;
+}
 
+.main > li:hover > a {
+    color: #fff;
+}
 
+.main > li:hover {
+    background: #333;
+}
 
+/* 서브 메뉴 */
+.sub-wrapper {
+    position: absolute;
+    top: 60px; /* gnb 아래에 위치 */
+    left: 0;
+    width: 1200px;
+    background: rgba(0, 0, 0, 0.5);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+    z-index: 1;
+    padding: 20px 0;
+}
+
+.gnb:hover .sub-wrapper {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* 서브 메뉴 리스트 */
+.sub {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.sub li a {
+    font-size: 1.4rem;
+    color: #333;
+    padding: 4px 16px;
+}
+
+.sub li:hover a {
+    color: #fff;
+    background: #111;
+}
 
 
 

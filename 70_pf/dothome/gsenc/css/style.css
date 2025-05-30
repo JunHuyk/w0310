@@ -113,27 +113,27 @@ header {
     display: flex;
     height: 200px;
 }
-/* 공지사항 + 갤러리 */
-.noge {
+/* 탭 */
+.tab {
     width: 400px;
     border-left:1px solid gray;
     border-right : 1px solid gray;
 }
 
-.noge h2 {
+.tab h2 {
     padding: 10px 0 0 10px;
 }
-.noge li {
+.tab li {
     display: flex;
     justify-content: space-between;
     padding: 10px 0 0 10px;
 }
-.noge span {
+.tab span {
     font-size: 13px;
     padding-right: 10px;
 }
 
-.noge li a:hover{
+.tab li a:hover{
     color:#3D6ACA;
     text-decoration: underline;
 }
