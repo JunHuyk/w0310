@@ -95,15 +95,15 @@ nav {
 
 .slide {
   overflow: hidden;
-  width: 100vw;
+  width: 100%;
   height: 350px;
 }
-.slidegnb {
+.slide_gnb {
   display: flex;
   width: 400vw;
   transition: transform 0.3s ease;
 }
-.navinner {
+.nav_inner {
   width: 100vw;
   flex-shrink: 0;
 }
@@ -162,6 +162,9 @@ nav {
 
 .notice {
     width: 670px;
+}
+.notice li {
+    padding-top: 16px;
 }
 
 
