@@ -1,228 +1,103 @@
-@charset "utf-8";
-@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css);
+@charset "UTF-8";
 
-/* padding 과 border크기의 박스를 안쪽으로 지정한다 */
 * {
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body {
-    font: 16px/1.6 "굴림", sans-serif;
-    background: #fff;
-    color : #333;
-    /* color : #1b3b86; */
-
-}
-a {
-    color : #333;
-    text-decoration: none;
-}
-body, h1, h2, p, ul {
-    margin: 0;
-}
-li {
-    padding: 0;
-}
 ul {
-    padding: 0;
-    list-style: none;
+  list-style: none;
 }
 
-header, .contents, footer{
-    width: 1340px;
-    margin: 0 auto;
+a {
+  color:#333;
+  text-decoration: none;
 }
 
-/* 헤더 */
-
- 
-header {
-    width: 1320px;
-    height: 100px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 auto;
+/* 보여질 탭 메뉴 */
+.tabs {
+  position: relative;
+  width: 400px;
+  height: 200px;
+  background: teal;
 }
-/* GNB */
-/* 폰트 위계 */
-/* 1depth */
-.main { 
-    display: flex;
+/* input 디자인제거 */
+.tabs input {
+  display: none;
 }
 
-.main>li {
-    display: block;
-    font-size: 20px;
-    font-weight: bold;
-    display: block;
-    width: 200px;
-    height: 50px;
-    text-align: center;
-    line-height: 50px;
-    color:#999;
+/* 탭 버튼 인라인블럭으로 바꾸고 박스처럼 사용 */
+.tabs label {
+  display: inline-block;
+  padding: 12px 8px;
+  background: #a3a3a3;
+  color: #838383;
+  cursor: pointer;
 }
 
-.main li a:hover {
-    color:skyblue;
-}
-/* 2depth */
-.sub {
-    height: 0;
-    opacity: 0;
-    visibility: hidden;
-    overflow: hidden;
-    line-height: 2;
-    transition: .3s;
-    background: rgba(0,0,0,0.5);
-    padding: 10px 0 20px;
-}
-.main>li:hover .sub{
-    height: 200px;
-    opacity: 1;
-    visibility: visible;
+/* 체크된 탭버튼 색변경 */
+.tabs input:checked+label {
+  background: #404040;
+  color:#eeebeb;
 }
 
-.gnb .sub a {
-    font-size: 14px;
-}
-
-
-
-/* 슬라이드 */
-
-.slide {
-  overflow: hidden;
-  width: 100vw;
-  height: 350px;
-}
-.gnb {
-  display: flex;
-  width: 400vw;
-  transition: transform 0.3s ease;
-}
-.navinner {
-  width: 100vw;
-  flex-shrink: 0;
-}
-.navinner img {
+/* 탭 콘텐츠 박스 겹치기 */
+.tabs .tab_contents {
+  position: absolute;
+  display: none;
   width: 100%;
+  padding: 16px;
+  border: 1px solid #000;
+}
+/* 선택된 탭 콘텐츠 보이기 */
+.tabs input:checked+label+.tab_contents {
   display: block;
 }
 
-/* 콘텐츠 */
-
-.contents {
-    height: 600px;
+.tabs .tab1 {
+  line-height: 2;
 }
 
-.contents a {
-    color:#fff;
+.tabs .tab1 a {
+  display: inline-block;
+  width: 300px;
 }
 
-.link {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 120px;
-    background: #1b3b86;
+.tabs .tab1 a:hover {
+  color: aqua;
+  text-decoration: underline;
 }
 
-
-.banner {
-    display: flex;
-    height: 150px;
-    background: rgb(150, 191, 243);
-    justify-content:space-between;
-    align-items: center;
-    padding: 0 30px;
+.modal {
+  display: none;
 }
-.banner .cont {
-    display: flex;
-}
-.banner .cont img {
-    margin-right: 16px;
+.modal:target {
+  display: block;
+  background: rgba(0,0,0,0.6);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
-
-
-.noge {
-    display: flex;
-    width: 1340px;
-    height: 330px;
-    background: #1b3b86;
-    padding: 30px;
-    color: #fff;
-}
-.noge h2 {
-    margin-bottom: 16px;
+.modal_contents {
+  margin: 15% auto;
+  width: 300px;
+  height: 300px;
+  background: white;
 }
 
-.notice {
-    width: 670px;
+.close {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: gray;
+  margin-left: 260px;
+  text-align: center;
+  line-height: 20px;
 }
-
-
-.notice a {
-    display: inline-block;
-    width: 500px;
+.close:hover {
+  background: darkgray;
 }
-
-.gallery {
-    width: 670px;
-}
-
-.inner {
-    display: flex;
-}
-
-.gallery a {
-    margin-right: 15px;
-}
-/* 푸터 */
-
-footer {
-    display: flex;
-    /* align-items와 align-content를 함께 사용하면 align-items가 적용된다. */
-    align-items: center;
-    height: 120px;
-    background: #333;
-    color:#777;
-    padding: 0 30px;
-}
-footer a {
-    color:#777;
-}
-
-.left {
-    width: 1000px;
-    padding-top: 35px;
-}
-
-.right {
-    width: 340px;
-}
-.sns {
-    padding-top: 16px;
-    height: 60px;
-    font-size: 24px;
-}
-
-.sns li{
-    display: inline;
-    margin-right: 16px;
-}
-
-.sns li:nth-of-type(1) a:hover {
-    color: #1a5bad;
-}
-.sns li:nth-of-type(2) a:hover {
-    color: red;
-}
-.sns li:nth-of-type(3) a:hover {
-    color: rgb(9, 168, 241);
-}
- 
- 
- 
- 

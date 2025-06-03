@@ -1,0 +1,95 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font: 14px/1.6 "돋움", sans-serif;
+  color: #333;
+}
+img {
+    vertical-align: middle;
+}
+ul {
+  list-style: none;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+/* -------------------------------------------- */
+
+.wrap {
+    display: flex;
+}
+
+header {
+    width: 200px;
+    height: 700px;
+    position: relative;
+    border: 1px solid #000;
+}
+
+.gnb {
+  position: absolute;
+  top: 100px;
+  left: 0;
+}
+
+.main>li {
+  position: relative;
+}
+.main>li>a {
+  display: block;
+  width: 200px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+}
+.main>li:hover>a{
+  background: #000;
+  color: white;
+}
+
+.main>li:hover .sub{
+  visibility: visible;
+  opacity: 1;
+}
+
+.sub {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+  left: 100%;
+  top:-20px;
+  border: 1px solid #000;
+  
+}
+
+.sub a{
+  display: block;
+  width: 200px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;  
+}
+
+.sub a:hover {
+  background: #000;
+  color:white;
+}
+
+
+
+
+
+
+/* .slide {
+    width: 1200px;
+    height: 300px;
+    overflow: hidden;
+} */

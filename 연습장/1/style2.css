@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color:#333;
+}
+
+.tabs {
+    position: relative;
+    background: lightblue;
+    width: 300px;
+    height: 300px;
+}
+
+.tabs input {
+    display: none;
+}
+
+.tabs label {
+    display: inline-block;
+    padding: 10px 10px;
+    cursor: pointer;
+}
+
+.tabs .tab_contents {
+    position: absolute;
+    display: none;
+    width: 100%;
+    padding: 16px;
+}
+
+
+.tabs input:checked+label {
+    background: lightgreen;
+    color:darkblue;
+    font-weight: bold;
+}
+
+.tabs input:checked+label+.tab_contents {
+    display: block;
+}
+
+.tab1 a {
+    display: inline-block;
+    width: 284px;
+    border: 1px solid #000;
+}
