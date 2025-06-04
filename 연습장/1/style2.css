@@ -15,43 +15,69 @@ a {
     color:#333;
 }
 
-.tabs {
+.wrap {
+    display: flex;
+}
+
+header {
     position: relative;
-    background: lightblue;
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 800px;
+    background: rgb(236, 236, 163);
 }
 
-.tabs input {
-    display: none;
+.gnb {
+    margin-top: 50px;
 }
-
-.tabs label {
-    display: inline-block;
-    padding: 10px 10px;
-    cursor: pointer;
+.main {
+    position:absolute
 }
-
-.tabs .tab_contents {
-    position: absolute;
-    display: none;
-    width: 100%;
-    padding: 16px;
+.main>li{
+    position: relative
 }
-
-
-.tabs input:checked+label {
-    background: lightgreen;
-    color:darkblue;
-    font-weight: bold;
-}
-
-.tabs input:checked+label+.tab_contents {
+.main>li>a {
     display: block;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    border: 1px solid #000;
 }
 
-.tab1 a {
-    display: inline-block;
-    width: 284px;
-    border: 1px solid #000;
+.main>li>a:hover {
+    background: blue;
+    color:aquamarine;
+}
+.main>li {
+    display: flex;
+}
+.sub {
+    position: absolute;
+    left: 100%;
+    top: -10px;
+    height: 0;
+    opacity: 0;
+    visibility: 0;
+    overflow: hidden;
+    transition: .3s;
+    line-height: 2;
+    text-align: center;
+}
+
+.sub a {
+    display: block;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+}
+.sub a:hover {
+    color: darkcyan;
+    background: #ddd;
+}
+.main>li:hover .sub{
+    background: lightseagreen;
+    height: 200px;
+    opacity: 1;
+    visibility: visible;
 }
