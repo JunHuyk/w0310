@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000000;
+        }
+
+        .open {
+            display: block;
+            width: 100px;
+            height: 50px;
+            border-radius: 10px;
+            background: lightgreen;
+            text-align: center;
+            line-height: 50px;
+            color:#fff;
+        }
+        .open:hover {
+            background: rgb(39, 138, 39);
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: rgba(0,0,0,0.6);
+        }
+        .modal:target {
+            display: block;
+        }
+
+        .modal_contents {
+            position: relative;
+            margin: 15% auto;
+            width: 300px;
+            height: 200px;
+            background: #fff;
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: lightskyblue;
+            border-radius: 5px;
+            display: block;
+            width: 25px;
+            height: 25px;
+            text-align: center;
+            line-height: 25px;
+            color:#fff;
+        }
+        .close:hover {
+            background: rgb(51, 121, 165);
+        }
+        
+        .modal_contents h3 {
+            padding: 10px;
+        }
+        .modal_contents p {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>공지사항</h2>
+    <a href="#modal" class="open"> 모달 버튼</a>
+
+    <div id="modal" class="modal">
+        <div class="modal_contents">
+            <a href="#" class="close">&times;</a>
+            <h3>모달내용</h3>
+            <p>모달내용입니다.</p>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -20,22 +20,26 @@ ul {
 img {
     vertical-align: middle;
 }
+/* 헤더 */
 header {
     position: relative;
     width: 1340px;
     height: 100px;
     margin: 0 auto;
-    border: 1px solid #999;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+header h1 {
+    margin-left: 30px;
+}
 .main {
     display: flex;
     position: absolute;
     top: 60px;
     right: 0px;
+    z-index: 3;
 }
 
 .main>li>a {
@@ -98,7 +102,7 @@ header {
     visibility: visible;
 }
 /* 슬라이드 */
-.slide {
+/* .slide {
     z-index: -2;
     width: 100%;
     height: 350px;
@@ -111,8 +115,26 @@ header {
     height: 350px;
 }
 .slidelist {
-    width: 400%;
-    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+} */
+
+.slide {
+    position: relative;
+    width: 1920px;
+    height: 350px;
+    overflow: hidden;
+}
+.inner {
+    position: absolute;
+    width: 1920px;
+    height: 350px;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+.inner.active {
+    opacity: 1;
 }
 /* 콘텐츠 */
 .wrap {
@@ -182,6 +204,7 @@ header {
     background: rgba(0,0,0,0.6);
 }
 .modal_contents {
+    position: relative;
     width: 300px;
     height: 300px;
     margin: 15% auto;
@@ -190,13 +213,15 @@ header {
 }
 
 .close {
+    position: absolute;
+    top: 250px;
+    right: 10px;
     display: block;
-    width: 20px;
-    height: 20px;
+    width: 70px;
+    height: 40px;
     background: lightblue;
     text-align: center;
-    line-height: 20px;
-    margin-left: 270px;
+    line-height: 40px;
 }
 .close:hover {
     color: white;
