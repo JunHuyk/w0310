@@ -19,12 +19,41 @@
                 </a>
             </h1>
             <!-- 내비게이션 -->
-            <nav>
-                <ul>
-                    <li><a href="#">국내당일여행</a></li>
-                    <li><a href="#">국내숙박여행</a></li>
-                    <li><a href="#">섬여행</a></li>
-                    <li><a href="#">제주도</a></li>
+            <nav class="gnb">
+                <ul class="main">
+                    <li><a href="#">국내당일여행</a>
+                        <ul class="sub">
+                            <li><a href="#">당일여행</a></li>
+                            <li><a href="#">축제여행</a></li>
+                            <li><a href="#">자유여행</a></li>
+                            <li><a href="#">봄꽃여행</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">국내숙박여행</a>
+                        <ul class="sub">
+                            <li><a href="#">1박2일</a></li>
+                            <li><a href="#">2박3일</a></li>
+                            <li><a href="#">28인승여행</a></li>
+                            <li><a href="#">당일치기 여행</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">섬여행</a>
+                        <ul class="sub">
+                            <li><a href="#">EStour BUS</a></li>
+                            <li><a href="#">이용절차</a></li>
+                            <li><a href="#">보유차량</a></li>
+                            <li><a href="#">견적문의</a></li>
+
+                        </ul>
+                    </li>
+                    <li><a href="#">제주도</a>
+                        <ul class="sub">
+                            <li><a href="#">1박2일</a></li>
+                            <li><a href="#">2박3일</a></li>
+                            <li><a href="#">3박4일</a></li>
+                            <li><a href="#">에어카텔</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
         </header>
@@ -50,7 +79,7 @@
                 <h2>공지사항</h2>
                 <ul>
                     <li>
-                        <a href="#">
+                        <a href="#modal">
                             <p><span>[공지] 함악낙화놀이 지정여행사 예약...</span>2025-04-14</p>
                         </a>
                     </li>
@@ -67,10 +96,18 @@
                 </ul>
             </div> <!-- notice.end -->
 
+            <div id="modal" class="modal">
+                <div class="modal_contents">
+                    <a href="#" class="close">닫기 &times;</a>
+                    <h3>모달 제목</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis consequatur ipsa quidem. Blanditiis, dolore corporis?</p>
+                </div>
+            </div>
+
             <!-- 갤러리 -->
             <div class="gallery">
                 <h2>갤러리</h2>
-                <div class="inner">
+                <div class="gall_inner">
                     <a href="#">
                         <img src="images/gallery1.jpg" alt="갤러리1"> <br>
                         <span>울릉도 흥도, 흑산도 섬여행</span>
@@ -79,7 +116,7 @@
                         <img src="images/gallery2.jpg" alt="갤러리2"> <br>
                         <span>해인사소리길 & 영상테마파크</span>
                     </a>
-                </div> <!-- .inner.end -->
+                </div> <!-- .gall_inner.end -->
             </div> <!-- .gallery.end -->
 
             <!-- link -->
@@ -109,20 +146,12 @@
 
         <!-- 슬라이드 -->
         <div class="slide">
-            <ul>
-                <li>
-                    <a href="#"><img src="images/slide1.jpg" alt="슬라이드1"></a>
-                </li>
-                <li>
-                    <a href="#"><img src="images/slide2.jpg" alt="슬라이드2"></a>
-                </li>
-                <li>
-                    <a href="#"><img src="images/slide3.jpg" alt="슬라이드3"></a>
-                </li> 
-                <li>
-                    <a href="#"><img src="images/slide1.jpg" alt="슬라이드1"></a>
-                </li>
-            </ul>
+            <div class="slidelist">
+                <div class="inner"><a href="#"><img src="images/slide1.jpg" alt="슬라이드1"></a></div>
+                <div class="inner"><a href="#"><img src="images/slide2.jpg" alt="슬라이드2"></a></div>
+                <div class="inner"><a href="#"><img src="images/slide3.jpg" alt="슬라이드3"></a></div>
+                <div class="inner"><a href="#"><img src="images/slide1.jpg" alt="슬라이드1"></a></div>
+            </div>
         </div>
     </div> <!-- .wrap end -->
     <!-- 푸터 -->
@@ -158,6 +187,7 @@
             </form>
         </div>
     </footer>
+    <script src="index.js"></script>
 </body>
 
 </html>
