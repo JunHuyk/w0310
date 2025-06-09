@@ -30,34 +30,15 @@ a {
 header {
     width: 200px;
     height: 700px;
-    position: relative;
     border: 1px solid #000;
 }
 
 .gnb {
-  position: absolute;
-  top: 100px;
-  left: 0;
+    margin-top: 100px;
 }
 
 .main>li {
   position: relative;
-}
-.main>li>a {
-  display: block;
-  width: 200px;
-  height: 50px;
-  text-align: center;
-  line-height: 50px;
-}
-.main>li:hover>a{
-  background: #000;
-  color: white;
-}
-
-.main>li:hover .sub{
-  visibility: visible;
-  opacity: 1;
 }
 
 .sub {
@@ -66,8 +47,7 @@ header {
   opacity: 0;
   left: 100%;
   top:-20px;
-  border: 1px solid #000;
-  
+  /* border: 1px solid #000; */
 }
 
 .sub a{
@@ -86,10 +66,3 @@ header {
 
 
 
-
-
-/* .slide {
-    width: 1200px;
-    height: 300px;
-    overflow: hidden;
-} */
