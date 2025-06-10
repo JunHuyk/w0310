@@ -55,38 +55,51 @@ a {
 
 
 header{
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 100px;
     background: #333;
 }
 .main {
     display: flex;
+    position: absolute;
+    top:30px;
+    right: 0;
 }
-.main>li {
+.main>li>a {
+    display: block;
     width: 200px;
     height: 50px;
     line-height: 50px;
     text-align: center;
 }
 
-.main>li:hover {
-    background: green;
-    transition: .3s;
+.main>li:hover .sub{
+    height: 200px;
+    opacity: 1;
+    visibility: visible;
+    background: #000;
+    color:#fff;
 }
 
-.dropdown {
+.sub {
     height: 0;
     overflow: hidden;
     visibility: hidden;
     opacity: 0;
-    padding: 10px 0 20px;
-    line-height: 2;
     transition: .5s;
 }
-.main li:hover .dropdown {
-    height: 150px;
-    visibility: visible;
-    opacity: 1;
-    background: rgba(0,0,0,0.5);
+
+.sub a{
+    display: block;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+}
+.sub a:hover {
+    background: lightcoral;
+    color:white;
 }
