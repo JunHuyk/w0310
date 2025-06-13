@@ -28,6 +28,7 @@ a {
 }
 
 header {
+    /* position: relative; */
     width: 200px;
     height: 700px;
     border: 1px solid #000;
@@ -36,33 +37,62 @@ header {
 .gnb {
     margin-top: 100px;
 }
+.main{
+  position: relative;
+}
+.main::before {
+  z-index: -1;
+  position: absolute;
+  top: 0px;
+  left: 100%;
+  content:"";
+  background: rgba(0,0,0,0.5);
+  width: 0;
+  height: 200px;
+}
+
+.main:hover::before {
+  width: 800px;
+}
 
 .main>li {
   position: relative;
 }
 
-.sub {
-  position: absolute;
-  visibility: hidden;
-  opacity: 0;
-  left: 100%;
-  top:-20px;
-  /* border: 1px solid #000; */
-}
-
-.sub a{
+.main>li>a {
   display: block;
   width: 200px;
   height: 50px;
   text-align: center;
-  line-height: 50px;  
+  line-height: 50px;
 }
 
-.sub a:hover {
-  background: #000;
-  color:white;
+.main:hover .sub {
+  width: 800px;
+  height: 200px;
+  opacity: 1;
+  visibility: visible;
+}
+.sub{
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
 }
 
+
+.sub a {
+  display: block;
+  width: 200px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+}
 
 
 
