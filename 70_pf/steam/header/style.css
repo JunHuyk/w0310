@@ -2,15 +2,11 @@
 
 /* 초기화식 */
 body {
-    margin: 0;
-    font: 16px/1.6 sans-serif,'돋움';
     height: 5000px;
+    background-image: url(./images/bg.jpg);
+    background-repeat: repeat-y;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
-}
 li {
     padding: 0;
     margin: 0;
