@@ -9,6 +9,8 @@ const stepBar = document.querySelectorAll('.step_bar')
 let i = 0;
 let idx = 0;
 btn.addEventListener('click',()=>{
+    if(!validateStep(i)) return;
+
     if(i === signUpBox.length-1){
        window.location.href = "index.html"
        return;
@@ -26,6 +28,72 @@ const stepShow = ()=>{
     stepBar[idx].classList.add('now_step');
 }
 
+
+const validateStep = (step) => {
+    if(step === 0) {
+        const state = document.querySelector('#state');
+        const date = document.querySelector('#date');
+        const agree = document.querySelector('#agree_btn');
+
+        if(state.value === '선택' || !date.value || !agree.checked){
+            alert('모든 정보를 입력해주세요.');
+            return false;
+        }
+    }
+    
+    if(step === 1) {
+        const firstName = document.querySelector('#first_name');
+        const lastName = document.querySelector('#last_name');
+        const email = document.querySelector('#email');
+        const tel = document.querySelector('#tel');
+
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        const telPattern = /^\d{3}-\d{4}-\d{4}$/;
+
+        if(!firstName.value || !lastName.value || !email.value || !tel.value) {
+            alert('모든 정보를 입력해주세요.');
+            return false;
+        }
+        if(!emailPattern.test(email.value)){
+            alert('이메일 형식을 다시 확인해주세요.');
+            return false;
+        }
+        if(!telPattern.test(tel.value)){
+            alert('전화번호 형식을 다시 확인해주세요');
+            return false;
+        }
+    }
+    
+    if(step === 2) {
+        const userName = document.querySelector('#Username');
+        const passWord = document.querySelectorAll('.pw');
+
+        const idPattern = /^[a-zA-Z][a-zA-Z0-9]{9,23}$/;
+        const pwPattern = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*]).{8,}$/;
+
+        if(!userName.value || !passWord[0].value || !passWord[1].value){
+            alert('모든 정보를 입력해주세요.');
+            return false;
+        }
+        if(!idPattern.test(userName.value)){
+            alert('아이디 형식을 다시 확인해주세요.');
+            return false;
+        }
+        if(!pwPattern.test(passWord[0].value)){
+            alert('비밀번호 형식을 다시 확인해주세요.');
+            return false;
+        }
+        if(!pwPattern.test(passWord[1].value)){
+            alert('비밀번호 형식을 다시 확인해주세요.');
+            return false;
+        }
+        if(passWord[0].value !== passWord[1].value){
+            alert('입력하신 비밀번호가 서로 다릅니다.');
+            return false;
+        }
+    }
+    return true;
+};
 // function validateStep(step) {
 //     switch (step) {
 //         case 0: {
