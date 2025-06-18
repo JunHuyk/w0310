@@ -1,6 +1,11 @@
 // 내비게이션 서브메뉴 스타일 변경
 const main = document.querySelector('.main');
 const subs = document.querySelectorAll('.sub');
+const login = document.querySelector('.login');
+const signUp = document.querySelector('.sign_up');
+const userUi = document.querySelector('.user_ul');
+
+
 
 main.addEventListener('mouseover',()=>{
     subs.forEach(sub => {
