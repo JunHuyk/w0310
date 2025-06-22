@@ -14,7 +14,7 @@ btn.addEventListener('click',()=>{
 
     if(i === signUpBox.length-1){
         saveUserInfo();
-       window.location.href = "index.html"
+       window.location.href = "/70_pf/steam/index.html"
        return;
     }
     signUpBox[i].classList.remove('active');
@@ -36,7 +36,6 @@ const validateStep = (step) => {
         const state = document.querySelector('#state');
         const date = document.querySelector('#date');
         const agree = document.querySelector('#agree_btn');
-
         if(state.value === '선택' || !date.value || !agree.checked){
             alert('모든 정보를 입력해주세요.');
             return false;
@@ -63,6 +62,11 @@ const validateStep = (step) => {
         if(!telPattern.test(tel.value)){
             alert('전화번호 형식을 다시 확인해주세요');
             return false;
+        }
+        if(emailPattern.test(email.value)){
+            email.style.border = '1px solid green';
+        } else {
+            email.style.border = '1px solid red';
         }
     }
     
@@ -98,6 +102,7 @@ const validateStep = (step) => {
 };
 
 // 로컬스토리지
+
 const saveUserInfo = () =>{
     const data = {
         state : document.querySelector('#state').value ,
@@ -110,6 +115,11 @@ const saveUserInfo = () =>{
         userName : document.querySelector('#Username').value ,
         passWord : document.querySelectorAll('.pw')[0].value ,
     }
+    const userList = JSON.parse(localStorage.getItem('signUpData')) || [];
 
-    localStorage.setItem('signUpData',JSON.stringify(data));
+    userList.push(data);
+
+    localStorage.setItem('signUpData',JSON.stringify(userList));
 };
+
+
