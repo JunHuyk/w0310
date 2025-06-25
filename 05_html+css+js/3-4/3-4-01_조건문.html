@@ -99,7 +99,11 @@
                 if(html<40) {
                     document.write('html 40점 미만 불합격');
                 } else if(css < 40) {
-                    document.write('css 40점 미만 불합격');
+                    if( html < 40 ){
+                        document.write('html,css 40점 미만 합격불가')
+                    } else {
+                        document.write('css 40점 미만 불합격');
+                    }
                 } else if(js < 40) {
                     document.write('js 40점 미만 불합격');
                 } else {
@@ -110,6 +114,44 @@
 
         test();
 
+
+
+
+
+        /* 
+            switch / case 문
+
+            switch(변수) {
+                case 값 :
+                    실행문1;
+                    breack
+                case 값 :
+                    실행문2;
+                    break;
+                case 값 :
+                    실행문3;
+                    break;
+                defalut :
+                    실행문4;
+            }
+        */
+
+        let subject = 'javascript';
+
+        switch(subject){
+            case 'html':
+                subject += '은 1학점입니다.';
+                break;
+            case 'css':
+                subject += '은 2학점입니다.';
+                break;
+            case 'javascript' :
+                subject += '은 3학점입니다.';
+                break;
+            default :
+                subject += '해당과목이 없습니다.';
+        }
+        console.log(subject);
     </script>
 </body>
 </html>

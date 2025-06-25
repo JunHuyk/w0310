@@ -52,7 +52,7 @@ input {
 }
 .now_step {
     background: #23428f;
-    transform: scaleY(2);
+    transform: scaleY(1.5);
 }
    
 .sign_up_list {
@@ -163,6 +163,7 @@ input[type="checkbox"] {
     opacity: 1;
 }
 .sign_up_list button:hover {
-    background: #123B6A;
+    background: #0b3464;
     color:#fff;
 }
+

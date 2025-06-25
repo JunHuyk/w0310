@@ -36,7 +36,7 @@ login.addEventListener('click',()=>{
         } else {
             alert("로그인 또는 비밀번호가 틀렸습니다.");
         }
-})
+});
 
 // 배경이미지 변경 
 const inner = document.querySelectorAll('.inner');
@@ -47,20 +47,3 @@ setInterval(() => {
     inner[i].classList.add('active');
 }, 8000);
 
-// login.addEventListener('click',()=>{
-//     const savedData = JSON.parse(localStorage.getItem("signUpData"));
-
-//     if(!savedData) {
-//         alert("회원 가입된 정보가 없습니다");
-//         return;
-//     }
-//     if(inputId === savedData.userName){
-//         if(inputPw === savedData.passWord){
-//             window.location.href = "index.html"
-//         } else {
-//             alert("비밀번호가 틀렸습니다");
-//         }
-//     } else {
-//         alert("아이디가 일치하지 않습니다.");
-//     }
-// });

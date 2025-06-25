@@ -4,7 +4,8 @@
 
 const signUpBox = document.querySelectorAll('.sign_up_box');
 const btn = document.querySelector('.btn');
-const stepBar = document.querySelectorAll('.step_bar')
+const stepBar = document.querySelectorAll('.step_bar');
+
 let i = 0;
 let idx = 0;
 
@@ -14,19 +15,20 @@ btn.addEventListener('click',()=>{
 
     if(i === signUpBox.length-1){
         saveUserInfo();
-       window.location.href = "/70_pf/steam/index.html"
+       window.location.href = "/70_pf/steam/sub/sign_up_fin.html"
        return;
     }
     signUpBox[i].classList.remove('active');
     i++;
     signUpBox[i].classList.add('active');
     stepShow();
+
 });
 
 // 스텝바 이벤트
 const stepShow = ()=>{
     stepBar[idx].classList.remove('now_step');
-    idx++;
+    idx = (idx+1) % stepBar.length;
     stepBar[idx].classList.add('now_step');
 }
 

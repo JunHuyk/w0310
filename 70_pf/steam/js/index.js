@@ -37,7 +37,7 @@ main.addEventListener("mouseout", () => {
   });
 });
 
-// 슬라이드
+// 슬라이드 (Section1)
 
 const slides = document.getElementById("slides");
 const rects = document.querySelectorAll(".rect");
