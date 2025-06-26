@@ -1,6 +1,9 @@
 const signUpBox = document.querySelectorAll('.sign_up_box');
 const btn = document.querySelector('.btn');
 const stepBar = document.querySelectorAll('.step_bar');
+const red = document.querySelector('.input_red');
+const green = document.querySelector('.input_green');
+
 
 let i = 0;
 let idx = 0;
