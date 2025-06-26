@@ -167,3 +167,9 @@ input[type="checkbox"] {
     color:#fff;
 }
 
+.green {
+    border: 1px solid #008000;
+}
+.red {
+    border: 1px solid #ff0000;
+}

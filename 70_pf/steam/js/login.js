@@ -1,23 +1,23 @@
-const inputId = document.getElementById("username");
-const inputPw = document.getElementById("password");
-const login = document.querySelector(".login");
+const inputId = document.getElementById('username');
+const inputPw = document.getElementById('password');
+const login = document.querySelector('.login');
 
-const open = document.getElementById("open");
-const close = document.getElementById("close");
-const save = document.getElementById("save");
+const open = document.getElementById('open');
+const close = document.getElementById('close');
+const save = document.getElementById('save');
 
 // 보이기 토글
-open.addEventListener("click",()=>{
-    inputPw.type = "password";
-    open.classList.remove("show");
-    close.classList.add("show");
+open.addEventListener('click',()=>{
+    inputPw.type = 'password';
+    open.classList.remove('show');
+    close.classList.add('show');
 });
 
 //숨기기 토글
-close.addEventListener("click",()=>{
-    inputPw.type = "text";
-    close.classList.remove("show");
-    open.classList.add("show");
+close.addEventListener('click',()=>{
+    inputPw.type = 'text';
+    close.classList.remove('show');
+    open.classList.add('show');
 });
 
 
@@ -31,10 +31,10 @@ login.addEventListener('click',()=>{
         });
 
         if(searchData){
-            localStorage.setItem("loginUser",searchData.userName);
-            window.location.href = "/70_pf/steam/index.html"
+            localStorage.setItem('loginUser',searchData.userName);
+            window.location.href = '/70_pf/steam/index.html'
         } else {
-            alert("로그인 또는 비밀번호가 틀렸습니다.");
+            alert('로그인 또는 비밀번호가 틀렸습니다.');
         }
 });
 
