@@ -62,7 +62,7 @@ tel.addEventListener("input", () => {
 });
 
 userName.addEventListener("input", () => {
-  userName.classList.remove('input_red","input_green');
+  userName.classList.remove("input_red", "input_green");
   if (!idPattern.test(userName.value)) {
     userName.classList.add("input_red");
   } else {
