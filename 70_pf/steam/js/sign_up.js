@@ -4,6 +4,27 @@ const stepBar = document.querySelectorAll(".step_bar");
 const red = document.querySelector(".input_red");
 const green = document.querySelector(".input_green");
 
+//step0
+const state = document.getElementById("state");
+const date = document.getElementById("date");
+const agree = document.getElementById("agree_btn");
+
+//step1
+const firstName = document.getElementById("first_name");
+const lastName = document.getElementById("last_name");
+const email = document.getElementById("email");
+const tel = document.getElementById("tel");
+
+const emailPattern = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/;
+const telPattern = /^\d{3}-\d{4}-\d{4}$/;
+
+//step2
+const userName = document.getElementById("Username");
+const passWord = document.querySelectorAll(".pw");
+
+const idPattern = /^[a-zA-Z][a-zA-Z0-9]{9,23}$/;
+const pwPattern = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*]).{8,}$/;
+
 let i = 0;
 let idx = 0;
 
@@ -22,6 +43,33 @@ btn.addEventListener("click", () => {
   stepShow();
 });
 
+email.addEventListener("input", () => {
+  email.classList.remove("input_red", "input_green");
+  if (!emailPattern.test(email.value)) {
+    email.classList.add("input_red");
+  } else {
+    email.classList.add("input_green");
+  }
+});
+
+tel.addEventListener("input", () => {
+  tel.classList.remove("input_red", "input_green");
+  if (!telPattern.test(tel.value)) {
+    tel.classList.add("input_red");
+  } else {
+    tel.classList.add("input_green");
+  }
+});
+
+userName.addEventListener("input", () => {
+  userName.classList.remove('input_red","input_green');
+  if (!idPattern.test(userName.value)) {
+    userName.classList.add("input_red");
+  } else {
+    userName.classList.add("input_green");
+  }
+});
+
 // 스텝바 이벤트
 const stepShow = () => {
   stepBar[idx].classList.remove("now_step");
@@ -32,9 +80,6 @@ const stepShow = () => {
 // form 유효성 검사
 const validateStep = (step) => {
   if (step === 0) {
-    const state = document.querySelector("#state");
-    const date = document.querySelector("#date");
-    const agree = document.querySelector("#agree_btn");
     if (state.value === "선택" || !date.value || !agree.checked) {
       alert("모든 정보를 입력해주세요.");
       return false;
@@ -42,14 +87,6 @@ const validateStep = (step) => {
   }
 
   if (step === 1) {
-    const firstName = document.querySelector("#first_name");
-    const lastName = document.querySelector("#last_name");
-    const email = document.querySelector("#email");
-    const tel = document.querySelector("#tel");
-
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const telPattern = /^\d{3}-\d{4}-\d{4}$/;
-
     if (!firstName.value || !lastName.value || !email.value || !tel.value) {
       alert("모든 정보를 입력해주세요.");
       return false;
@@ -70,12 +107,6 @@ const validateStep = (step) => {
   }
 
   if (step === 2) {
-    const userName = document.querySelector("#Username");
-    const passWord = document.querySelectorAll(".pw");
-
-    const idPattern = /^[a-zA-Z][a-zA-Z0-9]{9,23}$/;
-    const pwPattern = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*]).{8,}$/;
-
     if (!userName.value || !passWord[0].value || !passWord[1].value) {
       alert("모든 정보를 입력해주세요.");
       return false;

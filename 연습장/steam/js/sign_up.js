@@ -5,21 +5,21 @@ const red = document.querySelector(".input_red");
 const green = document.querySelector(".input_green");
 
 //step0
-const state = document.querySelector("#state");
-const date = document.querySelector("#date");
-const agree = document.querySelector("#agree_btn");
+const state = document.getElementById("state");
+const date = document.getElementById("date");
+const agree = document.getElementById("agree_btn");
 
 //step1
-const firstName = document.querySelector("#first_name");
-const lastName = document.querySelector("#last_name");
-const email = document.querySelector("#email");
-const tel = document.querySelector("#tel");
+const firstName = document.getElementById("first_name");
+const lastName = document.getElementById("last_name");
+const email = document.getElementById("email");
+const tel = document.getElementById("tel");
 
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const telPattern = /^\d{3}-\d{4}-\d{4}$/;
 
 //step2
-const userName = document.querySelector("#Username");
+const userName = document.getElementById("Username");
 const passWord = document.querySelectorAll(".pw");
 
 const idPattern = /^[a-zA-Z][a-zA-Z0-9]{9,23}$/;
@@ -43,6 +43,7 @@ btn.addEventListener("click", () => {
   stepShow();
 });
 
+// 유효성 검사 조건에 따른 border 색상 변화
 email.addEventListener("input", () => {
   email.classList.remove("input_red", "input_green");
   if (!emailPattern.test(email.value)) {
@@ -58,6 +59,15 @@ tel.addEventListener("input", () => {
     tel.classList.add("input_red");
   } else {
     tel.classList.add("input_green");
+  }
+});
+
+userName.addEventListener("input", () => {
+  userName.classList.remove("input_red", "input_green");
+  if (!idPattern.test(userName.value)) {
+    userName.classList.add("input_red");
+  } else {
+    userName.classList.add("input_green");
   }
 });
 
