@@ -1,0 +1,132 @@
+@charset "utf-8";
+
+/* reset */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+    font-family: 'GothicA1-Light';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/GothicA1-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --gray1: #111;
+    --gray3: #333;
+    --gray5: #555;
+}
+
+body,
+h1,
+h2,
+h3,
+ul,
+p {
+    margin: 0;
+}
+
+body {
+    font: 16px/1.6 "Roboto", sans-serif;
+    color: var(--gray5);
+}
+
+h2 {
+    font-size: 40px;
+    font-weight: 700;
+    padding: 40px;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+a {
+    text-decoration: none;
+    color: var(--gray3);
+}
+
+/* common */
+.box_inner {
+    width: 1050px;
+    margin: 0 auto;
+}
+
+/* 헤더 */
+header {
+    z-index: 9999;
+    position: absolute;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 30px;
+}
+
+.logo {
+    width: 270px;
+    height: 40px;
+    border: 1px solid #fff;
+}
+
+
+/* 푸터 */
+footer {
+    border-top: 1px solid #ddd;
+    height: 160px;
+    font-size: 13px;
+}
+
+footer .box_inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 0 36px 0;
+}
+
+footer h3 {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+/* 하단 메뉴 */
+ul.foot_list {
+    display: flex;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.foot_list li:first-of-type::after {
+    content: '|';
+    padding: 0 10px;
+}
+
+.snslink {
+    display: flex;
+}
+
+.snslink a {
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin: 24px;
+    background: no-repeat 0 0/cover;
+}
+
+.snslink li:nth-of-type(1) a {
+    background-image: url("https://picsum.photos/id/401/50/50");
+}
+
+.snslink li:nth-of-type(2) a {
+    background-image: url("https://picsum.photos/id/404/50/50");
+}
+
+.snslink li:nth-of-type(3) a {
+    background-image: url("https://picsum.photos/id/406/50/50");
+}

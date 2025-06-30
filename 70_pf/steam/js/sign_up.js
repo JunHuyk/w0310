@@ -15,13 +15,13 @@ const lastName = document.getElementById("last_name");
 const email = document.getElementById("email");
 const tel = document.getElementById("tel");
 
-const emailPattern = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/;
-const telPattern = /^\d{3}-\d{4}-\d{4}$/;
-
 //step2
 const userName = document.getElementById("Username");
 const passWord = document.querySelectorAll(".pw");
 
+//정규식
+const emailPattern = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/;
+const telPattern = /^\d{3}-\d{4}-\d{4}$/;
 const idPattern = /^[a-zA-Z][a-zA-Z0-9]{9,23}$/;
 const pwPattern = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*]).{8,}$/;
 
@@ -43,6 +43,15 @@ btn.addEventListener("click", () => {
   stepShow();
 });
 
+// 스텝바 이벤트
+const stepShow = () => {
+  stepBar[idx].classList.remove("now_step");
+  idx = (idx + 1) % stepBar.length;
+  stepBar[idx].classList.add("now_step");
+};
+
+
+// 유효성 검사에 따른 input border 색 변화
 email.addEventListener("input", () => {
   email.classList.remove("input_red", "input_green");
   if (!emailPattern.test(email.value)) {
@@ -70,12 +79,24 @@ userName.addEventListener("input", () => {
   }
 });
 
-// 스텝바 이벤트
-const stepShow = () => {
-  stepBar[idx].classList.remove("now_step");
-  idx = (idx + 1) % stepBar.length;
-  stepBar[idx].classList.add("now_step");
-};
+passWord[0].addEventListener("input", () => {
+  passWord[0].classList.remove("input_red", "input_green");
+  if (!pwPattern.test(passWord[0].value)) {
+    passWord[0].classList.add("input_red");
+  } else {
+    passWord[0].classList.add("input_green");
+  }
+});
+
+passWord[1].addEventListener("input", () => {
+  passWord[1].classList.remove("input_red", "input_green");
+  if (passWord[1].value !== passWord[0].value) {
+    passWord[1].classList.add("input_red");
+  } else {
+    passWord[1].classList.add("input_green");
+  }
+});
+
 
 // form 유효성 검사
 const validateStep = (step) => {
