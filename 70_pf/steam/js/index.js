@@ -1,25 +1,4 @@
-const login = document.querySelector(".login");
-const signUp = document.querySelector(".sign_up");
-const userUi = document.querySelector(".user_ui");
-const userNameShow = document.querySelector(".username_show");
-
-const loginUser = localStorage.getItem("loginUser");
-
-// 로컬스토리지 값 저장되면 헤더 상단메뉴 변경
-if (loginUser) {
-  login.style.display = "none";
-  signUp.style.display = "none";
-
-  userUi.style.display = "flex";
-  userNameShow.textContent = loginUser;
-}
-// 마이페이지 이동
-userUi.addEventListener("click", () => {
-  window.location.href = "/w0310/70_pf/steam/sub/mypage.html";
-});
-
 // 슬라이드 (Section1)
-
 const slides = document.getElementById("slides");
 const rects = document.querySelectorAll(".rect");
 const total = rects.length;
