@@ -227,6 +227,10 @@ body {
 }
 
 /* sec2 */
+.sec_container {
+  background: url(/images/index/header/sec_bg.jpg)
+}
+
 .sec2_container {
   width: 100%;
   height: 100%;
@@ -327,12 +331,6 @@ body {
 /* sec3 */
 .sec3_teaser_section {
   padding: 60px 20px;
-  /* background-image: url('./../images/background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat; */
-  /* color: white;
-    font-family: 'Noto Sans KR', sans-serif; */
   position: relative;
 }
 
@@ -343,7 +341,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6);
+  /* background: rgba(0, 0, 0, 0.6); */
   z-index: 0;
 }
 
