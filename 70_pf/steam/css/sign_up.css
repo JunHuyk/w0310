@@ -166,6 +166,10 @@ input[type="checkbox"] {
     font-size: 12px;
 }
 
+.pw {
+    margin-top: 20px;
+}
+
 .sign_up_box {
     position: absolute;
     top: 0;
