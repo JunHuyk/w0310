@@ -1,18 +1,15 @@
 @charset "UTF-8";
 
 body {
-    background: linear-gradient(to bottom right, #0d0221, #1f005c);
-    color: white;
+    background-image: url(./../images/index/header/bg.jpg);
+    background-repeat: repeat-y;
+    background-size: 100%;
 }
 
 .main-section {
-    font-family: 'Noto Sans KR', sans-serif;
-    background-image: url(./../images/background.jpg);
-    background-size: cover;
-    background-position: center;
     position: relative;
     padding: 40px 10px 0;
-    max-width: 1920px;
+    width: 1600px;
     margin: auto;
 }
 
@@ -205,15 +202,17 @@ h2 {
 
 .more-news {
     margin-top: 40px;
-    background: white;
+    background: rgba(0, 0, 0, 0.5);
     color: black;
     padding: 20px;
     border-radius: 10px;
 }
 
-.more-news a{
-    color:#333;
+.more-news a {
+    color: #fff;
+    font-size: 20px;
 }
+
 .more-news li {
     margin-bottom: 50px;
     list-style: none;
@@ -222,5 +221,5 @@ h2 {
 
 .more-news span {
     float: right;
-    color: #555;
+    color: #fff;
 }
