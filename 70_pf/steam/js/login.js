@@ -43,4 +43,4 @@ setInterval(() => {
   inner[i].classList.remove("active");
   i = (i + 1) % inner.length;
   inner[i].classList.add("active");
-}, 8000);
+}, 7000);
