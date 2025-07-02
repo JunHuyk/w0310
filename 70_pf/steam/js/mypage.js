@@ -1,4 +1,4 @@
 const userName = document.querySelector(".username");
-const loginUser = localStorage.getItem("loginUser");
+const name = localStorage.getItem("loginUser");
 
-userName.textContent = loginUser;
+userName.textContent = name;

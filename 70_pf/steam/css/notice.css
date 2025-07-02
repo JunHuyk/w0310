@@ -7,7 +7,7 @@ body {
 }
 
 .container {
-    margin: 0 auto;
+    margin: 30px auto;
     width: 1400px;
     height: 1400px;
     padding: 40px 0;
@@ -40,6 +40,8 @@ body {
 .card p {
     color: #fff;
 }
+
+
 
 .card_list .card:hover {
     transform: translateY(-8px) scale(1.03);
@@ -115,6 +117,7 @@ body {
     display: none;
 }
 
+
 #tab1:checked~.steam_notice {
     display: block;
 }
@@ -132,9 +135,10 @@ body {
 }
 
 
-.tab-content li {
+.tab-content ul>li {
     height: 100px;
     line-height: 100px;
+    border-bottom: 1px solid #ccc;
 }
 
 .tab-content a {
