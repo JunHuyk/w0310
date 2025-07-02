@@ -18,4 +18,6 @@ saveBtn.addEventListener("click", () => {
 
   localStorage.setItem("signUpData", JSON.stringify(updateData));
   localStorage.setItem("loginUser", updateData.userName);
+
+  window.location.href = "w0310/70_pf/steam/index.html";
 });
