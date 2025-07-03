@@ -55,6 +55,16 @@
 
         split(구분자)
           -> 구분자를 기준으로 쪼개어 배열 형식으로 저장
+          -> 'javascript jquery' -> split('')
+          -> ['j','a','v','a','s',...'y']
+          -> 'javascript jquery' -> split(' ')
+          -> ['javascript','jquery']
+          -> 'javascript_jquery' -> split('_')
+          -> 'user_id=hong&user_pw=1234 -> split('&')
+          -> ['user_id=hong','user_pw=1234']
+          -> arr[0].toString() -> 'user_id=hong'
+          -> split('=') -> ['user_id','hong']
+          
         replace()
         concat()
         trim()
