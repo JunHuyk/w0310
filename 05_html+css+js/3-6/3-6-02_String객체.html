@@ -64,12 +64,20 @@
           -> ['user_id=hong','user_pw=1234']
           -> arr[0].toString() -> 'user_id=hong'
           -> split('=') -> ['user_id','hong']
-          
-        replace()
+
+        replace('찾을문자열', '교체문자열')
+          -> 찾은문자열을 교체문자열로 바꾸어 반환
+
         concat()
+          -> 문자열 연결
+
         trim()
+          -> 문자열의 앞/뒤 공백제거
+
         toLowerCase()
+          -> 소문자로 변환
         toUpperCase()
+          -> 대문자로 변환
 
     */
 
@@ -121,6 +129,25 @@
     const division = str4.split('_');
     // division = [Javascript,jQuery]
     console.log(division[0] + ' , ' + division[1]);
+
+    const str5 = 'm_out.png';
+    //replace 
+    console.log(str5.replace('out', 'over')); // out 문자열을 over로 변경
+
+    // concat() 
+    const str6 = 'nav';
+    const str7 = '_bg';
+    console.log(str6.concat(str7)); // nav_bg
+
+    // trim()
+    let str8 = ' removeblank';
+    console.log(str8.length);
+    console.log(str8.trim().length);
+
+    //toUpperCase()
+    console.log(str8.toUpperCase());
+    //toLowerCase()
+    console.log('ReMove'.toLowerCase());
   </script>
 </body>
 
