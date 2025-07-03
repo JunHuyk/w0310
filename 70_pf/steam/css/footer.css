@@ -61,7 +61,7 @@ footer {
 }
 
 .icon li:nth-of-type(1) a:hover {
-  color: #8b198b;
+  color: #cc28cc;
 }
 
 .icon li:nth-of-type(2) a:hover {
@@ -84,13 +84,13 @@ footer {
   display: inline-block;
   width: 132px;
   height: 57px;
-  background: linear-gradient(180deg, #3C3C3C 11.54%, #000 33.65%, #311BAC 84.13%, #546AD8 100%);
+  background: #ddd;
   border-radius: 10px;
-  color: white;
+  color: #222;
   text-align: center;
   line-height: 57px;
   transition: .3s;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: bold;
   opacity: .6;
 }

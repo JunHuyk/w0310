@@ -10,8 +10,10 @@
 
 /* header_top */
 .header_top {
+  position: relative;
+  z-index: 3;
   height: 50px;
-  background: #000;
+  background: linear-gradient(90deg, #000 0%, #1a2c59 50%, #000 100%);
   text-align: right;
   display: flex;
   flex-direction: row;
@@ -23,18 +25,20 @@
 .header_user {
   position: relative;
   width: 350px;
-  height: 30px;
+  height: 50px;
   margin-right: 50px;
+  padding-top: 10px;
 }
 
-.header_user a:first-of-type {
+.header_user>a:first-of-type {
   margin-right: 20px;
 }
 
 .user_ui {
-  width: 120px;
+  width: 200px;
+  height: 30px;
   position: absolute;
-  top: 4px;
+  top: 7px;
   left: 0;
   display: none;
   color: white;
@@ -42,18 +46,58 @@
   cursor: pointer;
 }
 
+.user_ui img {
+  vertical-align: bottom;
+}
+
 .user_ui span {
   margin-left: 10px;
 }
 
-.user_ui a {
-  display: inline-block;
-  width: 140px;
-  height: 50px;
+
+
+
+
+.profile_info {
+  width: 200px;
+  height: 0;
+  overflow: hidden;
+  background: linear-gradient(90deg, #000 0%, #1a2c59 50%, #000 100%);
+  transition: .3s;
 }
+
+.mypage {
+  display: inline-block;
+  width: 150px;
+  height: 50px;
+  line-height: 50px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 14px;
+  border: 1px solid #fff;
+  margin-top: 20px;
+}
+
+.sign_out_btn {
+  width: 150px;
+  height: 50px;
+  line-height: 50px;
+  margin: 0 auto;
+  background: transparent;
+  border: 1px solid #ddd;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+
+
+
+
 
 .login,
 .sign_up {
+
   display: inline-block;
   width: 115px;
   height: 35px;

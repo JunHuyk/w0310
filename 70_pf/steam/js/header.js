@@ -2,6 +2,7 @@ const login = document.querySelector(".login");
 const signUp = document.querySelector(".sign_up");
 const userUi = document.querySelector(".user_ui");
 const userNameShow = document.querySelector(".username_show");
+const profileInfo = document.querySelector(".profile_info");
 
 const loginUser = localStorage.getItem("loginUser");
 const main = document.querySelector(".main");
@@ -12,13 +13,18 @@ if (loginUser) {
   login.style.display = "none";
   signUp.style.display = "none";
 
-  userUi.style.display = "flex";
+  userUi.style.display = "block";
   userNameShow.textContent = loginUser;
 }
 // 마이페이지 이동
-userUi.addEventListener("click", () => {
-  window.location.href = "/w0310/70_pf/steam/sub/mypage.html";
+// userUi.addEventListener("click", () => {
+//   window.location.href = "/w0310/70_pf/steam/sub/mypage.html";
+// });
+
+userUi.addEventListener("mouseover", () => {
+  profileInfo.style.heigth = "200px";
 });
+
 // 내비게이션 서브메뉴 스타일 변경
 main.addEventListener("mouseover", () => {
   subs.forEach((sub) => {

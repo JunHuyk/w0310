@@ -20,8 +20,9 @@ const userName = document.getElementById("Username");
 const passWord = document.querySelectorAll(".pw");
 
 //정규식
+const datePattern = /^(19|20)\d{2}(0[1-9]|1[0-2])(0[1-9]|[12][0-9]|3[01])$/;
 const emailPattern = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/;
-const telPattern = /^\d{3}-\d{4}-\d{4}$/;
+const telPattern = /^\d{11}$/;
 const idPattern = /^[a-zA-Z][a-zA-Z0-9]{9,23}$/;
 const pwPattern = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*]).{8,}$/;
 
@@ -50,8 +51,17 @@ const stepShow = () => {
   stepBar[idx].classList.add("now_step");
 };
 
-
 // 유효성 검사에 따른 input border 색 변화
+
+date.addEventListener("input", () => {
+  date.classList.remove("input_red", "input_green");
+  if (!datePattern.test(date.value)) {
+    date.classList.add("input_red");
+  } else {
+    date.classList.add("input_green");
+  }
+});
+
 email.addEventListener("input", () => {
   email.classList.remove("input_red", "input_green");
   if (!emailPattern.test(email.value)) {
@@ -97,10 +107,13 @@ passWord[1].addEventListener("input", () => {
   }
 });
 
-
 // form 유효성 검사
 const validateStep = (step) => {
   if (step === 0) {
+    if (!datePattern.test(date.value)) {
+      alert("생년월일을 다시 확인해주세요.");
+      return false;
+    }
     if (state.value === "선택" || !date.value || !agree.checked) {
       alert("모든 정보를 입력해주세요.");
       return false;
