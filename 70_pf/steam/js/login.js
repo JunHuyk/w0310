@@ -30,7 +30,7 @@ login.addEventListener("click", () => {
 
   if (searchData) {
     localStorage.setItem("loginUser", searchData.userName);
-    window.location.href = "/w0310/70_pf/steam/index.html";
+    window.location.href = "../index.html";
   } else if (!inputId.value && !inputPw.value) {
     alert("아이디와 비밀번호를 입력해주세요");
   } else {

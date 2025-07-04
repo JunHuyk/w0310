@@ -28,6 +28,7 @@ userUi.addEventListener("mouseout", () => {
 
 signOut.addEventListener("click",()=>{
   localStorage.removeItem("loginUser");
+  window.location.href = "/w0310/70_pf/steam/index.html";
 });
 
 // 내비게이션 서브메뉴 스타일 변경
