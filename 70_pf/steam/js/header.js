@@ -3,7 +3,7 @@ const signUp = document.querySelector(".sign_up");
 const userUi = document.querySelector(".user_ui");
 const userNameShow = document.querySelector(".username_show");
 const profileInfo = document.querySelector(".profile_info");
-const signOut = document.querySelector('.sign_out_btn');
+const signOut = document.querySelector(".sign_out_btn");
 
 const loginUser = localStorage.getItem("loginUser");
 const main = document.querySelector(".main");
@@ -18,7 +18,6 @@ if (loginUser) {
   userNameShow.textContent = loginUser;
 }
 
-
 userUi.addEventListener("mouseover", () => {
   profileInfo.style.height = "160px";
 });
@@ -26,7 +25,7 @@ userUi.addEventListener("mouseout", () => {
   profileInfo.style.height = "0px";
 });
 
-signOut.addEventListener("click",()=>{
+signOut.addEventListener("click", () => {
   localStorage.removeItem("loginUser");
   window.location.href = "/w0310/70_pf/steam/index.html";
 });

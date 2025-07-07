@@ -1,4 +1,3 @@
-const signUpData = localStorage.getItem("signUpData");
 const saveBtn = document.querySelector(".save-btn");
 
 saveBtn.addEventListener("click", () => {
@@ -9,15 +8,28 @@ saveBtn.addEventListener("click", () => {
   const email = document.getElementById("email");
   const tel = document.getElementById("tel");
 
-  const updateData = {
-    userName: userName.value,
-    passWord: passWord.value,
-    email: email.value,
-    tel: tel.value,
-  };
+  let signUpData = JSON.parse(localStorage.getItem("signUpData")) || [];
+  const loginUser = localStorage.getItem("loginUser");
 
-  localStorage.setItem("signUpData", JSON.stringify(updateData));
-  localStorage.setItem("loginUser", updateData.userName);
+  signUpData = signUpData.map((user) => {
+    if (user.userName === loginUser) {
+      return {
+        ...user,
+        userName: userName.value,
+        passWord: passWord.value,
+        email: email.value,
+        tel: tel.value,
+      };
+    }
+    return user;
+  });
 
+  // 저장
+  localStorage.setItem("signUpData", JSON.stringify(signUpData));
+
+  // 유저네임도 다시 저장
+  localStorage.setItem("loginUser", userName.value);
+
+  // 페이지 이동
   window.location.href = "../index.html";
 });

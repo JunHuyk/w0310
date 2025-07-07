@@ -173,7 +173,7 @@ const saveUserInfo = () => {
     date: document.querySelector("#date").value,
     agree: document.querySelector("#agree_btn").checked,
     lastName: document.querySelector("#last_name").value,
-    firsName: document.querySelector("#first_name").value,
+    firtsName: document.querySelector("#first_name").value,
     email: document.querySelector("#email").value,
     tel: document.querySelector("#tel").value,
     userName: document.querySelector("#Username").value,
