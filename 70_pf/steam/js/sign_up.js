@@ -35,7 +35,7 @@ btn.addEventListener("click", () => {
 
   if (i === signUpBox.length - 1) {
     saveUserInfo();
-    window.location.href = "/w0310/70_pf/steam/sub/sign_up_fin.html";
+    window.location.href = "./sign_up_fin.html";
     return;
   }
   signUpBox[i].classList.remove("active");

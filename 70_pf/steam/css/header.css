@@ -59,10 +59,11 @@
 
 
 .profile_info {
+  margin-top: 10px;
   width: 200px;
   height: 0;
   overflow: hidden;
-  background: linear-gradient(90deg, #000 0%, #1a2c59 50%, #000 100%);
+  background: rgba(151, 151, 151, 0.3);
   transition: .3s;
 }
 
