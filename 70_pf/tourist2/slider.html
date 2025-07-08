@@ -45,17 +45,67 @@
         }
 
 
+        /* start/pause */
+        /* .bx-wrapper .bx-controls-auto {
+            text-align: center;
+        }
+
+        .bx-wrapper .bx-controls-auto .bx-start {
+            display: block;
+            text-indent: -9999px;
+            width: 10px;
+            height: 11px;
+            outline: 0;
+            background: url('images/controls.png') -86px -11px no-repeat;
+            margin: 0 3px;
+        }
+
+        .bx-wrapper .bx-controls-auto .bx-start:hover,
+        .bx-wrapper .bx-controls-auto .bx-start.active,
+        .bx-wrapper .bx-controls-auto .bx-start:focus {
+            background-position: -86px 0;
+        }
+
+        .bx-wrapper .bx-controls-auto .bx-stop {
+            display: block;
+            text-indent: -9999px;
+            width: 9px;
+            height: 11px;
+            outline: 0;
+            background: url('images/controls.png') -86px -44px no-repeat;
+            margin: 0 3px;
+        }
+
+        .bx-wrapper .bx-controls-auto .bx-stop:hover,
+        .bx-wrapper .bx-controls-auto .bx-stop.active,
+        .bx-wrapper .bx-controls-auto .bx-stop:focus {
+            background-position: -86px -33px;
+        } */
+
+        .bx-controls {
+            display: flex;
+            align-items: center;
+        }
+
+
+
         /* pager */
         .bx-wrapper .bx-pager,
         .bx-wrapper .bx-controls-auto {
-            position: absolute;
+            /* position: static; */
             bottom: 30px;
-            width: 100%;
+        }
+
+        .bx-controls .bx-has-controls-auto .bx-has-pager {
+            justify-content: center;
+            height: 100px;
+            background: red;
         }
 
         .bx-wrapper .bx-pager {
             text-align: center;
             padding-top: 0px;
+            background: blue;
         }
 
         .bx-wrapper .bx-pager.bx-default-pager a {
@@ -100,9 +150,12 @@
 <body>
     <div id="slideWrap">
         <div class="slide">
-            <div><img src="./images/335-1903x600.jpg" alt="이미지"></div>
+            <div style="height:500px; background:rgb(17, 117, 193)">1</div>
+            <div style="height:500px; background:rgb(17, 117, 193)">1</div>
+            <div style="height:500px; background:rgb(17, 117, 193)">1</div>
+            <!-- <div><img src="./images/335-1903x600.jpg" alt="이미지"></div>
             <div><img src="./images/337-1903x600.jpg" alt="이미지"></div>
-            <div><img src="./images/339-1903x600.jpg" alt="이미지"></div>
+            <div><img src="./images/339-1903x600.jpg" alt="이미지"></div> -->
         </div>
         <div class="title">
             <h2>TUUST &amp; INFORMATION</h2>

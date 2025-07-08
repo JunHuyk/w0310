@@ -1,6 +1,7 @@
 @charset "utf-8";
 /* reset */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css');
 
 @font-face {
     font-family: 'GothicA1-Light';
@@ -9,10 +10,12 @@
     font-style: normal;
 }
 
+/* :root는 html태그를 가리킨다. */
 :root {
     --gray1: #111;
     --gray3: #333;
     --gray5: #555;
+    scroll-behavior: smooth;
 }
 
 * {
@@ -29,7 +32,7 @@ p {
 }
 
 body {
-    font: 16px/1.6 "Roboto", sans-serif;
+    font: 16px/1.6 "Noto Sans KR", sans-serif;
     color: var(--gray5);
 }
 
@@ -46,6 +49,8 @@ ul {
 
 img {
     vertical-align: top;
+    width: 100%;
+    object-fit: cover;
 }
 
 a {
@@ -67,6 +72,7 @@ header {
     background: rgba(0, 0, 0, 0.5);
     padding-top: 8px;
 }
+
 header a {
     color: #fff;
 }
@@ -76,6 +82,7 @@ header a {
     text-align: right;
     font-size: 14px;
 }
+
 .util a:first-of-type::after {
     content: '|';
     margin: 0 8px;
@@ -109,6 +116,7 @@ header a {
     background: rgba(250, 100, 0, 0.85);
     transition: .5s;
 }
+
 .nav_bg.active {
     opacity: 1;
 }
@@ -131,19 +139,22 @@ header a {
 .sub {
     position: absolute;
     width: 40%;
-    top:70px;
-    opacity:0;
+    top: 70px;
+    opacity: 0;
     visibility: hidden;
     transition: .5s;
     text-align: center;
 }
+
 .sub.active {
     visibility: visible;
-    opacity:1;
+    opacity: 1;
 }
+
 .sub li {
     display: inline-block;
 }
+
 .sub a {
     display: block;
     padding: 8px 15px;
@@ -170,7 +181,7 @@ footer h3 {
 }
 
 /* 하단 메뉴 */
-ul.foot_list {
+.foot_list {
     display: flex;
     font-size: 16px;
     font-weight: 700;
@@ -204,4 +215,48 @@ ul.foot_list {
 
 .snslink li:nth-of-type(3) a {
     background-image: url("https://picsum.photos/id/406/50/50");
+}
+
+/* side Menu */
+.quick_area {
+    z-index: 9999;
+    position: fixed;
+    right: 0;
+    top: 200px;
+    background: #282828;
+    text-align: center;
+}
+
+.quick_area a {
+    display: block;
+    color: #fff;
+    padding: 12px 0;
+}
+
+.quick_area ul {
+    padding: 0 4px;
+}
+
+.quick_area li {
+    border-bottom: 1px solid #555;
+}
+
+.quick_area h3 {
+    font-size: 15px;
+    font-weight: 200;
+}
+
+.quick_area p {
+    font-size: 12px;
+}
+
+.to_the_top a {
+    display: block;
+    font-size: 16px;
+    background: #fff;
+    color: #333;
+}
+
+.to_the_top i {
+    margin-right: 8px;
 }

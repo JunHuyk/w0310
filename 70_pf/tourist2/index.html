@@ -5,12 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TOURIST IN TOUR</title>
+    <link rel="stylesheet" href="/w0310/70_pf/tourist2/css/main.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.min.js"></script>
     <script src="/w0310/70_pf/tourist2/js/slider.js"></script>
     <script src="/w0310/70_pf/tourist2/js/nav.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.17/jquery.bxslider.css">
-    <link rel="stylesheet" href="/w0310/70_pf/tourist2/css/main.css">
 </head>
 
 <body>
@@ -23,7 +22,8 @@
             </div>
             <div class="nav_outer_box">
                 <h1 class="logo">
-                    <a href="/w0310/70_pf/tourist2/index.html"><img src="https://picsum.photos/id/400/270/40" alt="로고"></a>
+                    <a href="/w0310/70_pf/tourist2/index.html"><img src="https://picsum.photos/id/400/270/40"
+                            alt="로고"></a>
                 </h1>
                 <nav class="gnb">
                     <div class="nav_bg"></div>
@@ -60,10 +60,17 @@
 
     <!-- 섹션1: PC 메인 롤링 -->
     <div class="main_rolling_pc">
-        <div class="bxslider">
-            <div><img src="https://picsum.photos/id/337/1903/600" alt="이미지1"></div>
-            <div><img src="https://picsum.photos/id/338/1903/600" alt="이미지2"></div>
-            <div><img src="https://picsum.photos/id/339/1903/600" alt="이미지3"></div>
+        <div id="slideWrap">
+            <div class="slide">
+                <div><img src="./images/335-1903x600.jpg" alt="이미지"></div>
+                <div><img src="./images/337-1903x600.jpg" alt="이미지"></div>
+                <div><img src="./images/339-1903x600.jpg" alt="이미지"></div>
+            </div>
+            <div class="title">
+                <h2>TUUST &amp; INFORMATION</h2>
+                <p>믿을 수 있는 여행정보, 여행... 어디로 가세요?</p>
+                <p>BE TOURIST FOR BETTER LIFE</p>
+            </div>
         </div>
     </div>
     <!-- 섹션2: 인기 여행지 -->
@@ -111,7 +118,34 @@
             </div><!-- //.notice end -->
         </div><!-- //.box_inner -->
     </div><!-- //.appbbs_area -->
-    <!-- 푸터 -->
+
+    <!-- side menu -->
+    <aside class="quick_area">
+        <ul class="quick_list">
+            <li>
+                <a href="tel:010-1234-5678">
+                    <h3>전화 문의</h3>
+                    <p>010-1234-5678</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <h3>카카오톡</h3>
+                    <p>1:1 상담</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <h3>오시는 길</h3>
+                </a>
+            </li>
+        </ul>
+        <p class="to_the_top">
+            <a href="#top" class="s_point"><i class="fa-solid fa-caret-up"></i>TOP</a>
+        </p>
+    </aside>
+
+    <!-- footer -->
     <footer>
         <div class="box_inner">
             <div class="foot_left">
@@ -126,7 +160,8 @@
                         <span class="space0"><a href="tel:02-1234-5678">02-1234-5678</a></span>
                         <span class="gubun">/</span>
                         <span class="br_line">E-mail :
-                            <span class="space0"><a href="mailto:titour@touristintour.com">titour@touristintour.com</a></span>
+                            <span class="space0"><a
+                                    href="mailto:titour@touristintour.com">titour@touristintour.com</a></span>
                             <!-- 네이버 메일 연결하기 -->
                             <!-- <span class="space0"><a href="https://mail.naver.com/write/popup?srvid=note&to=id@naver.com">titour@touristintour.com</a></span> -->
                         </span>

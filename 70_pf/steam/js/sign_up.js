@@ -133,11 +133,6 @@ const validateStep = (step) => {
       alert("전화번호 형식을 다시 확인해주세요");
       return false;
     }
-    if (emailPattern.test(email.value)) {
-      email.style.border = "1px solid green";
-    } else {
-      email.style.border = "1px solid red";
-    }
   }
 
   if (step === 2) {
