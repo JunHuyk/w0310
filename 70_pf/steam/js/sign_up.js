@@ -55,56 +55,45 @@ const stepShow = () => {
 
 date.addEventListener("input", () => {
   date.classList.remove("input_red", "input_green");
-  if (!datePattern.test(date.value)) {
-    date.classList.add("input_red");
-  } else {
-    date.classList.add("input_green");
-  }
+  datePattern.test(date.value)
+    ? date.classList.add("input_green")
+    : date.classList.add("input_red");
 });
 
 email.addEventListener("input", () => {
   email.classList.remove("input_red", "input_green");
-  if (!emailPattern.test(email.value)) {
-    email.classList.add("input_red");
-  } else {
-    email.classList.add("input_green");
-  }
+  emailPattern.test(email.value)
+    ? email.classList.add("input_green")
+    : email.classList.add("input_red");
 });
 
 tel.addEventListener("input", () => {
   tel.classList.remove("input_red", "input_green");
-  if (!telPattern.test(tel.value)) {
-    tel.classList.add("input_red");
-  } else {
-    tel.classList.add("input_green");
-  }
+  telPattern.test(tel.value)
+    ? tel.classList.add("input_green")
+    : tel.classList.add("input_red");
 });
 
 userName.addEventListener("input", () => {
   userName.classList.remove("input_red", "input_green");
-  if (!idPattern.test(userName.value)) {
-    userName.classList.add("input_red");
-  } else {
-    userName.classList.add("input_green");
-  }
+  idPattern.test(userName.value)
+    ? userName.classList.add("input_green")
+    : userName.classList.add("input_red");
 });
 
 passWord[0].addEventListener("input", () => {
   passWord[0].classList.remove("input_red", "input_green");
-  if (!pwPattern.test(passWord[0].value)) {
-    passWord[0].classList.add("input_red");
-  } else {
-    passWord[0].classList.add("input_green");
-  }
+  pwPattern.test(passWord[0].value)
+    ? passWord[0].classList.add("input_green")
+    : passWord[0].classList.add("input_red");
 });
 
 passWord[1].addEventListener("input", () => {
   passWord[1].classList.remove("input_red", "input_green");
-  if (passWord[1].value !== passWord[0].value) {
-    passWord[1].classList.add("input_red");
-  } else {
-    passWord[1].classList.add("input_green");
-  }
+  passWord[1].value !== passWord[0].value
+    ? passWord[1].classList.add("input_green")
+    : passWord[1].classList.add("input_red");
+  
 });
 
 // form 유효성 검사

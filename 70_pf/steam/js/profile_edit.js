@@ -48,6 +48,7 @@ tel.addEventListener("input", () => {
     ? tel.classList.add("input_green")
     : tel.classList.add("input_red");
 });
+
 saveBtn.addEventListener("click", () => {
   const loginUser = localStorage.getItem("loginUser");
 

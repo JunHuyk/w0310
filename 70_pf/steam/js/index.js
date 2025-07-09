@@ -1,3 +1,14 @@
+//
+const slider = document.getElementById("sec2_slider");
+const slider2 = document.getElementById("sec2_slider2");
+
+const sliderBtn = document.getElementById("slider_btn");
+//istrut 추가해서 두개 왔다갔다
+sliderBtn.addEventListener("click", () => {
+  slider.classList.add("none");
+  slider2.classList.remove("none");
+});
+
 // 슬라이드 (Section1)
 const slides = document.getElementById("slides");
 const rects = document.querySelectorAll(".rect");
