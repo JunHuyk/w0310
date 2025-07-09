@@ -159,6 +159,7 @@ body {
 }
 
 .sec2_card_wrap {
+  z-index: 1;
   width: 320px;
   margin-right: 20px;
   transition: 0.3s;
@@ -168,6 +169,8 @@ body {
 .sec2_card_wrap p {
   margin-top: 10px;
 }
+
+
 
 /* sec3 */
 .sec3_teaser_section {
