@@ -90,7 +90,7 @@ passWord[0].addEventListener("input", () => {
 
 passWord[1].addEventListener("input", () => {
   passWord[1].classList.remove("input_red", "input_green");
-  passWord[1].value !== passWord[0].value
+  passWord[1].value === passWord[0].value
     ? passWord[1].classList.add("input_green")
     : passWord[1].classList.add("input_red");
   
