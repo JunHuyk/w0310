@@ -289,7 +289,7 @@ li a p span {
   color: #b55edd;
 }
 
-button {
+.sale {
   font-size: 24px;
   width: 400px;
   height: 80px;
@@ -301,7 +301,7 @@ button {
   color: rgba(255, 255, 255, 0.5);
 }
 
-button:hover {
+.sale:hover {
   background: rgb(255, 100, 200);
   box-shadow: 0 0 15px inset rgba(255, 255, 255, 0.8);
   color: #fff;
