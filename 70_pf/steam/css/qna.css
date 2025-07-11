@@ -11,8 +11,9 @@ body {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.60) 0%, rgba(26, 44, 89, 0.60) 49.52%, rgba(0, 0, 0, 0.60) 100%);
   width: 1500px;
   height: 100%;
-  margin: 0 auto;
+  margin: 50px auto;
   padding: 20px;
+
 }
 
 /* 상단제목 */

@@ -6,9 +6,13 @@ body {
   background-size: 100%;
 }
 
+.review-page {
+  margin-top: 20px;
+}
+
 .review-page,
 .more-reviews {
-  padding: 40px 60px;
+  padding: 0 60px;
 }
 
 h2 {

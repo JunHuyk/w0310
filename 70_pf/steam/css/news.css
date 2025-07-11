@@ -65,6 +65,7 @@ h1 {
     position: relative;
 }
 
+
 .slide-item img {
     width: 100%;
     height: 100%;
@@ -148,11 +149,12 @@ h2 {
     justify-content: center;
     margin-top: 20px;
     margin-bottom: 50px;
+    height: 350px;
 }
 
 .thumbnail-row img {
-    width: 431px;
-    height: 265px;
+    width: 100%;
+    height: 70%;
     border-radius: 6px;
 }
 
@@ -211,15 +213,20 @@ h2 {
 .more-news a {
     color: #fff;
     font-size: 20px;
+    transition: .3s;
 }
 
 .more-news li {
     margin-bottom: 50px;
-    list-style: none;
     font-size: 35px;
 }
 
 .more-news span {
     float: right;
     color: #fff;
+}
+
+.more-news li>a:hover {
+    text-decoration: underline;
+    color: #800080;
 }

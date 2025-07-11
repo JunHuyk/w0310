@@ -94,7 +94,7 @@ body {
   width: 200%;
   height: 550px;
   padding: 20px;
-  transition: .3s;
+  transition: opacity .5s;
 }
 
 .sec2_card {
@@ -142,6 +142,7 @@ body {
 
 .sec2_notice_box img {
   width: 750px;
+  cursor: pointer;
   transition: 0.3s;
 }
 
@@ -162,7 +163,6 @@ body {
   z-index: 1;
   width: 320px;
   margin-right: 20px;
-  transition: 0.3s;
   overflow: hidden;
 }
 
@@ -219,11 +219,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 50%;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
-  margin-bottom: 40px;
+  box-shadow: 20px 30px 12px rgba(0, 0, 0, 0.8);
+  margin: 0 auto 40px;
 }
 
 .sec3_thumbnail_slider {

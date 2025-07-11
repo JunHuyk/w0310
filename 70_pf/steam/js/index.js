@@ -5,12 +5,11 @@ const slider2 = document.getElementById("sec2_slider2");
 const sliderBtn = document.getElementById("slider_btn");
 let slideIdx = 0;
 
-//istrut 추가해서 두개 왔다갔다
 sliderBtn.addEventListener("click", () => {
-  if(slideIdx === 1){
+  if (slideIdx === 1) {
     slideIdx = 0;
-    slider.classList.remove('none');
-    slider2.classList.add('none');
+    slider.classList.remove("none");
+    slider2.classList.add("none");
   } else {
     slideIdx = 1;
     slider.classList.add("none");
